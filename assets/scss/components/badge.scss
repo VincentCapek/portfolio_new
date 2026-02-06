@@ -1,0 +1,21 @@
+.badge,
+span.tag,
+a.tag,
+.tagcloud > a,
+.post-holder-tags > a,
+.wp-block-tag-cloud > a,
+.testimonial-headline > b {
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25em;
+  min-height: 1.625rem;
+  margin: 5px 2.5px;
+  padding: 0.35rem 0.65rem;
+  border-radius: var(--border-radius-md);
+  font-size: 1rem !important;
+  font-weight: 500 !important;
+  line-height: 1 !important;
+  color: #000;
+}
