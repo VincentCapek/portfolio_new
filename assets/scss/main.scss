@@ -158,6 +158,24 @@ video {
   vertical-align: baseline;
 }
 
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+footer {
+  background-color: var(--footer-bg-color);
+}
+
 li {
   margin: 0.5rem 0;
   font-size: 1rem;

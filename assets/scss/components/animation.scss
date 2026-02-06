@@ -1,0 +1,21 @@
+.card-angle-animation {
+  animation: 2s gradient-angle infinite linear;
+  border: 2px solid transparent;
+  background-image:
+    linear-gradient(#04071d, #0c0e23),
+    conic-gradient(
+      from var(--gradient-angle),
+      #04071d 0%,
+      #480092 37%,
+      #cbacf9 30%,
+      #480092 33%,
+      #04071d 40%,
+      #04071d 50%,
+      #480092 77%,
+      #cbacf9 80%,
+      #480092 83%,
+      #04071d 90%
+    );
+  background-clip: padding-box, border-box;
+  background-origin: padding-box, border-box;
+}

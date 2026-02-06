@@ -79,7 +79,106 @@
                         <div class="card-content mt-3">
                             <div class="heading">
                                 <h5 class="title m-0"> Modern Finance Dashboard UI </h5>
-                                <div class="show-project"></div>
+                                <div class="show-project">
+                                    <div class="post-holder-tags mt-2">
+                                        <a href="#">Branding</a>
+                                        ,
+                                        <a href="#">Web Design</a>
+                                    </div>
+                                    <div class="project-link">
+                                        <a href="#">Show Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 item filter-item-1 shuffle-item shuffle-item--visible">
+                    <!-- Portfolio Item -->
+                    <div class="card-item portfolio-item scale">
+                        <a href="#">
+                            <div class="image-holder">
+                                <!-- Card Thumb -->
+                                <div class="card-thumb">
+                                    <img decoding="async" src="/assets/img/content/case-1.jpg"
+                                        class="card-img-top wp-post-image" alt="Modern Finance Dashboard UI">
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card Content -->
+                        <div class="card-content mt-3">
+                            <div class="heading">
+                                <h5 class="title m-0"> Modern Finance Dashboard UI </h5>
+                                <div class="show-project">
+                                    <div class="post-holder-tags mt-2">
+                                        <a href="#">Branding</a>
+                                        ,
+                                        <a href="#">Web Design</a>
+                                    </div>
+                                    <div class="project-link">
+                                        <a href="#">Show Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 item filter-item-1 shuffle-item shuffle-item--visible">
+                    <!-- Portfolio Item -->
+                    <div class="card-item portfolio-item scale">
+                        <a href="#">
+                            <div class="image-holder">
+                                <!-- Card Thumb -->
+                                <div class="card-thumb">
+                                    <img decoding="async" src="/assets/img/content/case-1.jpg"
+                                        class="card-img-top wp-post-image" alt="Modern Finance Dashboard UI">
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card Content -->
+                        <div class="card-content mt-3">
+                            <div class="heading">
+                                <h5 class="title m-0"> Modern Finance Dashboard UI </h5>
+                                <div class="show-project">
+                                    <div class="post-holder-tags mt-2">
+                                        <a href="#">Branding</a>
+                                        ,
+                                        <a href="#">Web Design</a>
+                                    </div>
+                                    <div class="project-link">
+                                        <a href="#">Show Project</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 item filter-item-1 shuffle-item shuffle-item--visible">
+                    <!-- Portfolio Item -->
+                    <div class="card-item portfolio-item scale">
+                        <a href="#">
+                            <div class="image-holder">
+                                <!-- Card Thumb -->
+                                <div class="card-thumb">
+                                    <img decoding="async" src="/assets/img/content/case-1.jpg"
+                                        class="card-img-top wp-post-image" alt="Modern Finance Dashboard UI">
+                                </div>
+                            </div>
+                        </a>
+                        <!-- Card Content -->
+                        <div class="card-content mt-3">
+                            <div class="heading">
+                                <h5 class="title m-0"> Modern Finance Dashboard UI </h5>
+                                <div class="show-project">
+                                    <div class="post-holder-tags mt-2">
+                                        <a href="#">Branding</a>
+                                        ,
+                                        <a href="#">Web Design</a>
+                                    </div>
+                                    <div class="project-link">
+                                        <a href="#">Show Project</a>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

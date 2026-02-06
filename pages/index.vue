@@ -13,6 +13,15 @@
 
   <!-- Sections - Section Portfolio -->
   <PortfolioSection />
+
+  <!-- Sections - Section Skills -->
+  <SkillsSection />
+
+  <!-- Sections - Section Approch -->
+  <ApproachSection />
+
+  <!-- Sections - Section Contact -->
+  <ContactSection />
 </template>
 
 <script setup>
@@ -21,4 +30,7 @@ import FunFactsSection from '@components/sections/FunFactsSection.vue';
 import ExpertiseSection from '@components/sections/ExpertiseSection.vue';
 import ServicesSection from '@components/sections/ServicesSection.vue';
 import PortfolioSection from '@components/sections/PortfolioSection.vue';
+import SkillsSection from '@components/sections/SkillsSection.vue';
+import ApproachSection from '@components/sections/ApprochSection.vue';
+import ContactSection from '@components/sections/ContactSection.vue';
 </script>

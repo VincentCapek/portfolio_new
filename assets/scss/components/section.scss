@@ -47,4 +47,200 @@
     display: block;
     overflow: hidden;
   }
+
+  .show-project {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .post-holder-tags {
+    gap: 0;
+    margin-top: 0;
+    transition: all var(--transition-function) var(--transition-duration);
+  }
+
+  .show-project .project-link {
+    position: absolute;
+    opacity: 0;
+    left: 0;
+    transition: all var(--transition-function) var(--transition-duration);
+  }
+
+  .show-project .project-link a::after {
+    position: absolute;
+    content: '';
+    top: 48%;
+    right: -0.5rem;
+    height: 2px;
+    width: 3rem;
+    background-color: currentColor;
+    transform: translate(100%, 50%);
+  }
+}
+
+.portfolio-item:not(.minimal):not(.interactive) .show-project .project-link a {
+  color: var(--button-color);
+}
+
+.post-holder-tags {
+  display: inline-flex;
+  flex-wrap: wrap;
+  vertical-align: middle;
+  align-items: center;
+  gap: 0.25em;
+  margin-top: 20px;
+}
+
+span.tag,
+a.tag,
+.tagcloud > a,
+.post-holder-tags > a,
+.wp-block-tag-cloud > a,
+.testimonial-headline > b {
+  display: inline-flex;
+  vertical-align: middle;
+  align-items: center;
+  background: color-mix(in srgb, var(--neutral-color) 15%, transparent);
+  color: inherit;
+}
+
+.portfolio-item .post-holder-tags > a,
+.interactive-link .post-holder-tags a {
+  padding: 0;
+  background: none !important;
+  color: inherit !important;
+}
+
+.skills {
+  .item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 50rem;
+    padding: 40px 32px;
+    background-color: transparent;
+    background-image: linear-gradient(180deg, #04071d 0%, #0c0e23 100%);
+  }
+
+  .item .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .item .content span {
+    font-size: 2.5rem;
+    color: #e4ecff;
+    font-weight: 600;
+  }
+
+  .item .content .title  {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    font-size: 19px;
+    font-weight: 400;
+    color: var(--primary-color);
+    justify-content: center;
+    line-height: 2.5;
+    margin: 0;
+    padding: 0;
+  }
+}
+
+.approach {
+  .item {
+    padding: 32px;
+    border-radius: 16px;
+  }
+
+  .item .item-count {
+    margin-right: 1rem;
+    font-size: var(--h3-size);
+    writing-mode: vertical-lr;
+    -webkit-transform: rotate(180deg);
+    transform: rotate(180deg);
+    -webkit-text-stroke-width: 1px;
+    stroke-width: 1px;
+    -webkit-text-stroke-color: var(--primary-color);
+    stroke: var(--primary-color);
+    color: rgba(255, 255, 255, 0);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .item .tl-widget.heading {
+    gap: 10px;
+  }
+}
+
+.contact {
+  position: relative;
+  overflow: hidden;
+
+  &&::before {
+    position: absolute;
+    content: '';
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.5;
+    background-image: url(../img/content/shape-2.png);
+    background-attachment: scroll;
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .contact-icon-list .icon-list-item:not(:last-child) {
+    padding-bottom: 7.5px;
+  }
+
+  .contact-icon-list .icon-list-item span {
+    font-size: 20px !important;
+    font-weight: 500 !important;
+  }
+
+  .contact-icon-list .icon-list-item span.icon-list-text {
+    color: var(--white-color);
+    transition: color 0.3s;
+  }
+
+  .tl-widget.icon-box .icon {
+    color: var(--white-color);
+  }
+
+  .tl-widget.social-icons .social-icon .icon {
+    font-size: 20px;
+  }
+}
+
+.social-icons {
+  a {
+    margin: 5px;
+    width: 45px;
+    height: 45px;
+    background-color: #1c1c1c;
+    color: var(--white-color) !important;
+    border-radius: 14px;
+    overflow: hidden;
+    transition: all 0.3s ease 0s;
+  }
+
+  .icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    margin: 0 auto;
+    transition: all 0.3s ease 0s;
+  }
+
+  svg {
+    transition: all 0.3s ease 0s;
+  }
 }
