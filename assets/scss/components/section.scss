@@ -180,7 +180,7 @@ a.tag,
   position: relative;
   overflow: hidden;
 
-  &&::before {
+  &::before {
     position: absolute;
     content: '';
     height: 100%;

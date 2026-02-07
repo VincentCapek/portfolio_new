@@ -1,3 +1,6 @@
+@use './components';
+@use './layout';
+
 :root {
   --primary-font: 'Inter', serif;
   --secondary-font: 'Inter', serif;
@@ -57,15 +60,6 @@
   --transition-function: cubic-bezier(0.645, 0.045, 0.355, 1);
   --transition-duration: 0.35s;
 }
-
-@import './components/section.scss';
-@import './components/button.scss';
-@import './components/animation.scss';
-@import './components/badge.scss';
-@import './components/card.scss';
-@import './components/section.scss';
-@import './components/swiper.scss';
-@import './layout/_content.scss';
 
 body {
   padding: 0 !important;
