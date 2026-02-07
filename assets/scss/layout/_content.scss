@@ -210,3 +210,47 @@
 .tl-widget.social-icons .social-icon:not(.shape-square):not(.shape-rounded):not(.has-text) {
   border-radius: 100%;
 }
+
+.tl-widget.post-info {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  margin: 0;
+
+  li {
+    margin: 0;
+    color: inherit;
+  }
+
+  li:not(:last-child)::after {
+    display: inline-block;
+    vertical-align: middle;
+    margin-top: -1px;
+    font-family: bootstrap-icons !important;
+    font-size: 1em;
+    font-weight: 600 !important;
+    color: var(--primary-color);
+  }
+}
+
+.tl-widget.post-info.layout-inline {
+  align-items: center;
+}
+
+.tl-single-portfolio {
+  .post-info li:not(:last-child)::after {
+    content: '\f309';
+  }
+
+  .title {
+    font-weight: 600;
+  }
+
+  .portfolio-info {
+    gap: 3rem;
+  }
+
+  .button svg {
+    height: inherit;
+  }
+}

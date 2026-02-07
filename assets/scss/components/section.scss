@@ -244,3 +244,114 @@ a.tag,
     transition: all 0.3s ease 0s;
   }
 }
+
+.gallery-items {
+  display: inline-block;
+  margin: 2.5px 5px;
+  vertical-align: top;
+}
+
+section#slider:not(.bg-inherit) {
+  background-color: var(--fill-color);
+}
+
+.breadcrumb {
+  --bs-breadcrumb-padding-x: 0;
+  --bs-breadcrumb-padding-y: 0;
+  --bs-breadcrumb-margin-bottom: 1rem;
+  --bs-breadcrumb-bg: ;
+  --bs-breadcrumb-border-radius: ;
+  --bs-breadcrumb-divider-color: var(--bs-secondary-color);
+  --bs-breadcrumb-item-padding-x: 0.5rem;
+  --bs-breadcrumb-item-active-color: var(--bs-secondary-color);
+  display: flex;
+  flex-wrap: wrap;
+  padding: var(--bs-breadcrumb-padding-y) var(--bs-breadcrumb-padding-x);
+  margin-bottom: var(--bs-breadcrumb-margin-bottom);
+  font-size: var(--bs-breadcrumb-font-size);
+  list-style: none;
+  background-color: var(--bs-breadcrumb-bg);
+  border-radius: var(--bs-breadcrumb-border-radius);
+}
+
+.breadcrumb {
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0;
+  background: none;
+  color: inherit;
+}
+
+.breadcrumb-item {
+  display: flex;
+  align-items: center;
+  margin: 0.3rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.breadcrumb-item + .breadcrumb-item {
+  padding-left: var(--bs-breadcrumb-item-padding-x);
+}
+
+.breadcrumb-item.active {
+  color: var(--bs-breadcrumb-item-active-color);
+}
+
+.breadcrumb-item.active {
+  color: var(--primary-color);
+}
+
+ul.page-numbers,
+.page-links {
+  display: flex;
+  width: fit-content;
+  padding-left: 0;
+  margin: 35px auto;
+  margin-left: inherit;
+  border-radius: var(--border-radius-md);
+  -webkit-box-shadow: 0px 0px 15px 0px var(--box-shadow-color);
+  box-shadow: 0px 0px 15px 0px var(--box-shadow-color);
+  list-style: none;
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+ul.page-numbers {
+  justify-content: center;
+
+  li {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+  }
+}
+
+a.page-numbers,
+span.page-numbers,
+a.post-page-numbers:not(.btn),
+span.post-page-numbers {
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  white-space: nowrap;
+  min-height: 3rem;
+  padding: 0 1.25rem;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-md);
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: var(--primary-t-color);
+  transition: all var(--transition-function) var(--transition-duration);
+}
+
+span.page-numbers.current,
+a.post-page-numbers.current,
+span.post-page-numbers.current {
+  background-color: var(--button-color);
+  color: var(--black-color);
+}

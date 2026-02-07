@@ -60,6 +60,11 @@
 
 @import './components/section.scss';
 @import './components/button.scss';
+@import './components/animation.scss';
+@import './components/badge.scss';
+@import './components/card.scss';
+@import './components/section.scss';
+@import './components/swiper.scss';
 @import './layout/_content.scss';
 
 body {
@@ -172,6 +177,11 @@ section {
   display: block;
 }
 
+b,
+strong {
+  font-weight: 600;
+}
+
 footer {
   background-color: var(--footer-bg-color);
 }
@@ -238,6 +248,17 @@ h5 {
   word-wrap: break-word;
 }
 
+h6 {
+  margin: 1.5rem 0;
+  font-size: var(--h6-size);
+  font-weight: var(--h6-weight);
+  line-height: 1.2;
+  font-family: var(--primary-font);
+  color: var(--primary-t-color);
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -297,4 +318,18 @@ header {
 
 .navbar-nav .nav-item {
   margin: 0;
+}
+
+/* Scrollbar (Chrome/Edge/Safari) */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--fill-color);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--secondary-color);
+  border-radius: var(--border-radius-sm);
 }
