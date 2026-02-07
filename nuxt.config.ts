@@ -9,7 +9,7 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/google-fonts'],
 
   // Bootstrap d'abord, puis tes overrides
-  css: ['bootstrap/dist/css/bootstrap.min.css', '~/assets/scss/main.scss', 'lenis/dist/lenis.css'],
+  css: ['bootstrap/dist/css/bootstrap.min.css', 'bootstrap-icons/font/bootstrap-icons.css', '~/assets/scss/main.scss', 'lenis/dist/lenis.css'],
 
   googleFonts: {
     families: {

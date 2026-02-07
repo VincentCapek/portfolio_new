@@ -180,6 +180,10 @@ footer {
   background-color: var(--footer-bg-color);
 }
 
+a {
+  color: var(--primary-color);
+}
+
 li {
   margin: 0.5rem 0;
   font-size: 1rem;
@@ -213,6 +217,17 @@ h2 {
   margin: 1.5rem 0;
   font-size: var(--h2-size);
   font-weight: var(--h2-weight);
+  line-height: 1.2;
+  font-family: var(--primary-font);
+  color: var(--primary-t-color);
+  -ms-word-wrap: break-word;
+  word-wrap: break-word;
+}
+
+h3 {
+  margin: 1.5rem 0;
+  font-size: var(--h3-size);
+  font-weight: var(--h3-weight);
   line-height: 1.2;
   font-family: var(--primary-font);
   color: var(--primary-t-color);
@@ -307,6 +322,10 @@ header {
     z-index: 2;
     width: 100%;
     padding: 20px 25px;
+  }
+
+  .navbar.is-hidden {
+    display: none;
   }
 }
 
