@@ -1,74 +1,69 @@
 <template>
     <div ref="root" class="relome-preloader" aria-hidden="true">
         <svg viewBox="0 0 1000 1000" preserveAspectRatio="none">
-            <path ref="pathEl" id="loader" :d="endShape" />
+            <!-- Start with the "covering" shape so the page is hidden immediately -->
+            <path ref="pathEl" :d="startShape" />
         </svg>
 
         <div class="loader-container">
-            <div class="loaded">
-                <span>L</span>
-                <span>O</span>
-                <span>A</span>
-                <span>D</span>
-                <span>I</span>
-                <span>N</span>
-                <span>G</span>
+            <div ref="loadedEl" class="loaded">
+                <span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span>
             </div>
         </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, onBeforeUnmount, ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { gsap } from 'gsap'
 
 const root = ref<HTMLElement | null>(null)
 const pathEl = ref<SVGPathElement | null>(null)
+const loadedEl = ref<HTMLElement | null>(null)
 
 let tl: gsap.core.Timeline | null = null
+let ctx: gsap.Context | null = null
 
-// Shapes Relome (copiées de ton fichier)
 const startShape = 'M0 502S175 272 500 272s500 230 500 230V0H0Z'
 const endShape = 'M0 2S175 1 500 1s500 1 500 1V0H0Z'
 
 onMounted(() => {
-    if (!root.value || !pathEl.value) return
+    if (!root.value || !pathEl.value || !loadedEl.value) return
 
-    // Optionnel : assure l’état initial
-    gsap.set(root.value, { y: 0, display: 'flex', zIndex: 99999 })
-    gsap.set('.loader-container .loaded', { opacity: 1, y: 0 })
+    // Disable scrolling while the preloader is visible
+    document.documentElement.classList.add('is-preloading')
+    document.body.classList.add('is-preloading')
 
-    tl = gsap.timeline()
+    ctx = gsap.context(() => {
+        // Ensure preloader is visible and above everything
+        gsap.set(root.value!, { yPercent: 0, display: 'flex', zIndex: 99999, autoAlpha: 1 })
+        gsap.set(loadedEl.value!, { opacity: 1, y: 0 })
 
-    tl.to('.loader-container .loaded', {
-        delay: 1.2,
-        y: -50,
-        opacity: 0,
-        duration: 0.6,
-    })
-        .to(pathEl.value, {
-            duration: 0.6,
-            attr: { d: startShape },
-            ease: 'power1.in',
-        })
-        .to(pathEl.value, {
-            duration: 0.6,
-            attr: { d: endShape },
-            ease: 'power1.out',
-        })
-        .to(root.value, {
-            y: -1000,
-            duration: 0.8,
-        })
-        .set(root.value, {
-            zIndex: -1,
-            display: 'none',
-        })
+        tl = gsap
+            .timeline({
+                onComplete: () => {
+                    document.documentElement.classList.remove('is-preloading')
+                    document.body.classList.remove('is-preloading')
+                },
+            })
+            // 1) Fade & lift the "LOADING" text
+            .to(loadedEl.value!, { delay: 1.2, y: -50, opacity: 0, duration: 0.6 })
+            // 2) Retract the SVG shape (cover -> thin top line)
+            .to(pathEl.value!, { duration: 0.6, attr: { d: endShape }, ease: 'power1.out' })
+            // 3) Move the whole preloader out of the viewport
+            .to(root.value!, { yPercent: -110, duration: 0.8 })
+            // 4) Remove from flow completely
+            .set(root.value!, { zIndex: -1, display: 'none', autoAlpha: 0 })
+    }, root.value)
 })
 
 onBeforeUnmount(() => {
     tl?.kill()
     tl = null
+    ctx?.revert()
+    ctx = null
+    document.documentElement.classList.remove('is-preloading')
+    document.body.classList.remove('is-preloading')
 })
 </script>
 
@@ -81,7 +76,10 @@ onBeforeUnmount(() => {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: transparent;
+
+    /* Make it opaque so the page content is hidden behind it */
+    background: var(--primary-bg-color);
+
     overflow: hidden;
     z-index: 99999;
 
@@ -107,7 +105,6 @@ onBeforeUnmount(() => {
         letter-spacing: 8px;
     }
 
-    /* (Optionnel) animation des lettres — si tu veux l’effet “pulsing” */
     .loaded span {
         display: inline-block;
         animation: loader-animation 1s infinite alternate;

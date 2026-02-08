@@ -199,6 +199,18 @@ li {
   line-height: 1.5;
 }
 
+::-webkit-input-placeholder {
+  color: var(--primary-p-color) !important;
+}
+
+:-ms-input-placeholder {
+  color: var(--primary-p-color) !important;
+}
+
+::placeholder {
+  color: var(--primary-p-color) !important;
+}
+
 a:not(.button):not(.nav-link):not(.elementor-icon),
 a:link:not(.button):not(.nav-link):not(.elementor-icon),
 a:visited:not(.button):not(.nav-link):not(.elementor-icon),

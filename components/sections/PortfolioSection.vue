@@ -22,9 +22,7 @@
                             <div class="content">
                                 <input type="radio" class="btn-check filter-btn-1" :name="radioName"
                                     :id="`filter-${uid}-${f.value}`" :value="f.value" v-model="selected" />
-                                <label class="btn" :for="`filter-${uid}-${f.value}`">
-                                    {{ f.label }}
-                                </label>
+                                <label class="btn" :for="`filter-${uid}-${f.value}`">{{ f.label }}</label>
                             </div>
                             <span class="count">{{ String(f.count).padStart(2, '0') }}</span>
                         </div>
@@ -32,10 +30,10 @@
                 </div>
             </div>
 
-            <!-- Filter Items -->
+            <!-- Filter Items (paged) -->
             <div ref="gridEl" class="row items inner filter-items-1 shuffle">
-                <div v-for="p in projects" :key="p.slug" class="col-12 col-md-6 item filter-item-1 shuffle-item"
-                    :data-groups="JSON.stringify(p.groups)">
+                <div v-for="p in paginatedProjects" :key="p.slug"
+                    class="col-12 col-md-6 item filter-item-1 shuffle-item" :data-groups="JSON.stringify(p.groups)">
                     <div class="card-item portfolio-item scale">
                         <NuxtLink :to="`/projects/${p.slug}`">
                             <div class="image-holder">
@@ -63,26 +61,30 @@
                                     </div>
                                 </div>
 
-                                <p class="mt-2 mb-0" style="opacity: 0.8">
-                                    {{ p.excerpt }}
-                                </p>
+                                <p class="mt-2 mb-0" style="opacity: 0.8">{{ p.excerpt }}</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
+
+            <!-- Pagination (Relome-like markup: current span, other pages are <a>, next is <a>) -->
+            <div v-if="totalPages > 1" class="row">
                 <div class="col-12">
-                    <nav>
+                    <nav aria-label="Portfolio pagination">
                         <ul class="page-numbers">
-                            <li>
-                                <span aria-current="page" class="page-numbers current">1</span>
+                            <li v-for="n in totalPages" :key="n">
+                                <span v-if="n === page" aria-current="page" class="page-numbers current">{{ n }}</span>
+
+                                <a v-else class="page-numbers" href="#" @click.prevent="goToPage(n)">
+                                    {{ n }}
+                                </a>
                             </li>
+
                             <li>
-                                <a class="page-numbers" href="#">2</a>
-                            </li>
-                            <li>
-                                <a class="next page-numbers" href="#">
+                                <a class="next page-numbers" href="#" :aria-disabled="page >= totalPages"
+                                    :style="page >= totalPages ? 'pointer-events:none;opacity:.5;' : ''"
+                                    @click.prevent="goToPage(page + 1)" aria-label="Next page">
                                     <i class="icon-arrow-right"></i>
                                 </a>
                             </li>
@@ -95,10 +97,13 @@
 </template>
 
 <script setup lang="ts">
-import { computed, onBeforeUnmount, onMounted, ref, watch } from 'vue'
+import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { projects } from '@/data/projects'
 
+const PER_PAGE = 4
+
 const selected = ref<'all' | 'frontend' | 'backend'>('all')
+const page = ref(1)
 
 const uid = Math.random().toString(36).slice(2)
 const radioName = `shuffle-filter-${uid}`
@@ -115,24 +120,56 @@ const filters = computed(() => {
     ]
 })
 
+const filteredProjects = computed(() => {
+    if (selected.value === 'all') return projects
+    return projects.filter((p) => p.groups.includes(selected.value))
+})
+
+const totalPages = computed(() => Math.max(1, Math.ceil(filteredProjects.value.length / PER_PAGE)))
+
+const paginatedProjects = computed(() => {
+    const start = (page.value - 1) * PER_PAGE
+    return filteredProjects.value.slice(start, start + PER_PAGE)
+})
+
+function goToPage(n: number) {
+    const clamped = Math.min(Math.max(1, n), totalPages.value)
+    page.value = clamped
+}
+
+watch(selected, () => {
+    page.value = 1
+})
+
 const gridEl = ref<HTMLElement | null>(null)
 let shuffle: any = null
 
-onMounted(async () => {
+async function initOrRefreshShuffle() {
     if (!gridEl.value) return
 
     const { default: Shuffle } = await import('shufflejs')
+
+    await nextTick()
+
+    if (shuffle) {
+        shuffle.destroy()
+        shuffle = null
+    }
 
     shuffle = new Shuffle(gridEl.value, {
         itemSelector: '.filter-item-1',
         buffer: 1,
     })
 
-    shuffle.filter(selected.value)
+    shuffle.filter('all')
+}
+
+onMounted(async () => {
+    await initOrRefreshShuffle()
 })
 
-watch(selected, (val) => {
-    shuffle?.filter(val)
+watch([selected, page], async () => {
+    await initOrRefreshShuffle()
 })
 
 onBeforeUnmount(() => {

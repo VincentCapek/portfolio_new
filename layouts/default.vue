@@ -1,6 +1,5 @@
 <template>
     <MagicCursor />
-    <Loader />
     <div class="main">
         <Navbar />
         <div class="maint-wrapper">
@@ -9,6 +8,7 @@
         <!-- Footer -->
         <Footer />
         <!--====== Scroll To Top ======-->
+        <ScrollToTop />
     </div>
 </template>
 
@@ -16,5 +16,5 @@
 import Navbar from '@components/layout/Navbar.vue';
 import Footer from '@components/layout/Footer.vue';
 import MagicCursor from '@components/MagicCursor.vue';
-import Loader from '@components/Loader.vue';
+import ScrollToTop from '@components/layout/ScrollToTop.vue';
 </script>

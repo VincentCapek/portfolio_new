@@ -215,6 +215,10 @@
     width: 1em;
     height: 1em;
   }
+
+  .social-icon:hover .icon.icon-animated:first-child {
+    margin-top: -100%;
+  }
 }
 
 .tl-widget.social-icons .social-icon:not(.shape-square):not(.shape-rounded):not(.has-text) {
@@ -313,12 +317,16 @@
     transition: all var(--transition-function) var(--transition-duration);
   }
 
-  &:not(.outlined) label {
+  &:not(.outlined) .wpcf7-list-item-label {
     background-color: color-mix(in srgb, var(--neutral-color) 10%, transparent);
   }
 
   input[type='submit'] {
     padding: 16px 30px;
     border-radius: 100px;
+  }
+
+  ::placeholder {
+    color: inherit !important;
   }
 }
