@@ -9,6 +9,11 @@
   line-height: 1;
 }
 
+.swap-icon .icon:hover,
+.swap-icon svg:hover {
+  animation: swap ease-out var(--transition-duration);
+}
+
 .tl-widget.icon-box {
   display: flex;
   flex-direction: column;

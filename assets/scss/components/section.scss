@@ -15,6 +15,10 @@
     border-radius: 100%;
     transition-duration: 0.3s;
     transition-property: transform;
+
+    &:hover {
+      transform: scale(0.9);
+    }
   }
 
   .bio {
@@ -226,6 +230,10 @@ a.tag,
 
   .tl-widget.icon-box .icon {
     color: var(--white-color);
+
+    &:hover {
+      border-color: var(--secondary-color);
+    }
   }
 
   .tl-widget.social-icons .social-icon .icon {
@@ -376,9 +384,33 @@ span.post-page-numbers {
   transition: all var(--transition-function) var(--transition-duration);
 }
 
+a.page-numbers:hover,
+a.post-page-numbers:hover,
+span.post-page-numbers:hover {
+  background-color: var(--fill-color);
+}
+
 span.page-numbers.current,
 a.post-page-numbers.current,
 span.post-page-numbers.current {
   background-color: var(--button-color);
   color: var(--black-color);
+}
+
+span.page-numbers.current:hover,
+a.post-page-numbers.current:hover,
+span.post-page-numbers.current:hover {
+  background-color: var(--button-hover-color);
+}
+
+a.page-numbers:not(.current):hover,
+a.page-numbers:not(.current):active,
+a.page-numbers:not(.current):focus,
+a.post-page-numbers:not(.current):hover,
+a.post-page-numbers:not(.current):active,
+a.post-page-numbers:not(.current):focus,
+span.post-page-numbers:not(.current):hover,
+span.post-page-numbers:not(.current):active,
+span.post-page-numbers:not(.current):focus {
+  color: var(--primary-color);
 }

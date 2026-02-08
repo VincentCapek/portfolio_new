@@ -116,6 +116,11 @@
     font-weight: 600 !important;
     transition: all var(--transition-function) var(--transition-duration);
     opacity: 0.85;
+
+    &:hover {
+      box-shadow: none;
+      opacity: 0.75;
+    }
   }
 
   .input-item label::after {

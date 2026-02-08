@@ -27,3 +27,22 @@ input[type='submit'] {
   cursor: pointer;
   transition: all var(--transition-function) var(--transition-duration);
 }
+
+.button:hover,
+.button:active,
+.button:focus,
+a.button:hover,
+a.button:active,
+a.button:focus,
+.added_to_cart:hover,
+.added_to_cart:active,
+.added_to_cart:focus,
+button[type='submit']:hover,
+button[type='submit']:active,
+button[type='submit']:focus,
+input[type='submit']:hover,
+input[type='submit']:active,
+input[type='submit']:focus {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+}
