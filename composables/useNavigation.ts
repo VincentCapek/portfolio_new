@@ -1,80 +1,76 @@
-/**
- * useNavigation.ts
- *
- * Reproduces Relome's "4. Navigation" behavior:
- * - When scrolling down:
- *   - On desktop: hide the navbar
- *   - On mobile: keep it sticky
- * - When scrolling up:
- *   - Show the navbar
- *   - Toggle sticky depending on scroll position
- *
- * Thresholds match the theme script:
- * - Sticky threshold: 76px
- * - Desktop breakpoint: 767px
- */
 import { onMounted, onBeforeUnmount, ref } from 'vue'
 
 export function useNavigation() {
-    // Navbar visibility state (equivalent to jQuery fadeOut/slideDown)
     const navbarHidden = ref(false)
-
-    // Sticky state (equivalent to `.navbar-sticky`)
     const navbarSticky = ref(false)
 
-    // Last known scroll position (used to detect scroll direction)
     let lastScroll = 0
+    let ticking = false
 
-    // Same thresholds as the Relome script
-    const STICKY_THRESHOLD = 76
+    // Relome values
     const DESKTOP_MIN = 767
 
-    /**
-     * Updates navbar state based on:
-     * - current scroll position
-     * - scroll direction (up/down)
-     * - viewport width (desktop/mobile behavior differs)
-     */
-    const updateNavState = () => {
+    // Avoid jitter around the threshold: sticky turns ON later, OFF earlier
+    const STICKY_ON = 90
+    const STICKY_OFF = 60
+
+    // Ignore tiny scroll deltas (trackpads / smooth scrolling)
+    const MIN_DELTA = 6
+
+    const compute = () => {
         const y = window.scrollY || 0
-        const goingDown = y > lastScroll
+        const delta = y - lastScroll
+
+        // Ignore micro movements to prevent rapid toggling
+        if (Math.abs(delta) < MIN_DELTA) return
+
+        const goingDown = delta > 0
         const isDesktop = window.innerWidth >= DESKTOP_MIN
 
-        if (goingDown) {
-            // Scrolling down:
-            // - Desktop: hide the navbar
-            // - Mobile: enable sticky navbar
-            if (isDesktop) {
+        // Sticky with hysteresis
+        if (!navbarSticky.value && y >= STICKY_ON) navbarSticky.value = true
+        if (navbarSticky.value && y <= STICKY_OFF) navbarSticky.value = false
+
+        // Hide/show logic (Relome-like)
+        if (isDesktop) {
+            // Always show near the very top
+            if (y <= STICKY_OFF) {
+                navbarHidden.value = false
+            } else if (goingDown) {
                 navbarHidden.value = true
             } else {
-                navbarSticky.value = true
+                navbarHidden.value = false
             }
         } else {
-            // Scrolling up:
-            // - Always show the navbar
-            // - Sticky only after a small scroll threshold
+            // Mobile: never hide, keep sticky after threshold
             navbarHidden.value = false
-            navbarSticky.value = y >= STICKY_THRESHOLD
+            if (y >= STICKY_ON) navbarSticky.value = true
         }
 
         lastScroll = y
     }
 
-    onMounted(() => {
-        // Initialize the scroll position on mount
-        lastScroll = window.scrollY || 0
+    const update = () => {
+        if (ticking) return
+        ticking = true
+        requestAnimationFrame(() => {
+            compute()
+            ticking = false
+        })
+    }
 
-        // Listen to scroll events (passive for better performance)
-        window.addEventListener('scroll', updateNavState, { passive: true })
+    onMounted(() => {
+        lastScroll = window.scrollY || 0
+        compute()
+
+        window.addEventListener('scroll', update, { passive: true })
+        window.addEventListener('resize', update, { passive: true })
     })
 
     onBeforeUnmount(() => {
-        // Cleanup listener when the composable owner is destroyed
-        window.removeEventListener('scroll', updateNavState)
+        window.removeEventListener('scroll', update)
+        window.removeEventListener('resize', update)
     })
 
-    return {
-        navbarHidden,
-        navbarSticky,
-    }
+    return { navbarHidden, navbarSticky }
 }
