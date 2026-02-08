@@ -22,6 +22,10 @@
   .heading p {
     margin-top: 0;
   }
+
+  .heading a:hover .title {
+    color: var(--primary-color);
+  }
 }
 
 .tl-widget.badge {
