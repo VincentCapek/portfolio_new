@@ -19,6 +19,12 @@
   flex-direction: column;
   gap: 15px;
 
+  &.icon-box .icon {
+    font-size: 24px;
+    color: var(--primary-color);
+    line-height: 1;
+  }
+
   .item {
     padding: 32px;
     border-style: solid;
@@ -77,4 +83,9 @@ svg:not(:host).svg-inline--fa,
 svg:not(:root).svg-inline--fa {
   overflow: visible;
   box-sizing: content-box;
+}
+
+.icon-animation .icon {
+  -webkit-animation: spinner 10s infinite linear;
+  animation: spinner 10s infinite linear;
 }

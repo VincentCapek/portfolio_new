@@ -29,7 +29,7 @@
                         <div class="tl-widget icon-box left-aligned item">
                             <div class="icon-wrapper icon-animation">
                                 <span class="icon-group stacked shape-circle">
-                                    <i class="icon bi-asterisk"></i>
+                                    <i class="icon bi-lightning"></i>
                                 </span>
                             </div>
                             <div class="content">
@@ -44,7 +44,7 @@
                         <div class="tl-widget icon-box left-aligned item">
                             <div class="icon-wrapper icon-animation">
                                 <span class="icon-group stacked shape-circle">
-                                    <i class="icon bi-asterisk"></i>
+                                    <i class="icon bi-bezier2"></i>
                                 </span>
                             </div>
                             <div class="content">
@@ -66,7 +66,7 @@
                     <div class="row items">
                         <!-- Icon Box -->
                         <div class="tl-widget icon-box left-aligned item">
-                            <div class="icon-wrapper">
+                            <div class="icon-wrapper icon-animation">
                                 <span class="icon-group stacked shape-circle">
                                     <i class="icon bi-award"></i>
                                 </span>
@@ -81,7 +81,7 @@
                         <div class="tl-widget icon-box left-aligned item">
                             <div class="icon-wrapper">
                                 <span class="icon-group stacked shape-circle">
-                                    <i class="icon bi-award"></i>
+                                    <i class="icon bi-broadcast-pin"></i>
                                 </span>
                             </div>
                             <div class="content">
@@ -94,7 +94,7 @@
                         <div class="tl-widget icon-box left-aligned item">
                             <div class="icon-wrapper">
                                 <span class="icon-group stacked shape-circle">
-                                    <i class="icon bi-award"></i>
+                                    <i class="icon bi-patch-check"></i>
                                 </span>
                             </div>
                             <div class="content">
