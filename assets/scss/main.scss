@@ -182,6 +182,10 @@ footer {
 
 a {
   color: var(--primary-color);
+
+  &:hover {
+    color: var(--primary-color);
+  }
 }
 
 form {

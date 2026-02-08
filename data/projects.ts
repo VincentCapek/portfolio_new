@@ -14,7 +14,7 @@ export const projects: Project[] = [
         title: 'Events app',
         excerpt:
             'Event planning app with an interactive calendar, real-time notifications, and an admin panel to create, edit, and manage events.',
-        image: '/img/projects/EventApp.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['Laravel', 'React', 'Pusher', 'JavaScript', 'HTML5', 'CSS3'],
         groups: ['backend', 'frontend'],
     },
@@ -23,7 +23,7 @@ export const projects: Project[] = [
         title: 'Machinools App',
         excerpt:
             "An SEO toolbox for beginners: a simple dashboard and clear analyses to understand and improve a site's visibility on search engines.",
-        image: '/img/projects/Machinools.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['PHP', 'React', 'JavaScript', 'HTML5', 'CSS3'],
         groups: ['backend', 'frontend'],
     },
@@ -32,7 +32,7 @@ export const projects: Project[] = [
         title: 'CMSRails App',
         excerpt:
             'A Ruby on Rails CMS designed to create and manage articles with relational categories for structured content organization.',
-        image: '/img/projects/CMSApp.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['Ruby', 'Rails', 'Svelte', 'JavaScript', 'HTML5', 'CSS3'],
         groups: ['backend', 'frontend'],
     },
@@ -41,7 +41,7 @@ export const projects: Project[] = [
         title: 'Pics Anime Random App',
         excerpt:
             'An interactive Vue app to explore anime/manga images and GIF albums by category with a responsive and attractive UI.',
-        image: '/img/projects/PicsRandomApp.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['Vue.js', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3'],
         groups: ['frontend'],
     },
@@ -50,7 +50,7 @@ export const projects: Project[] = [
         title: 'Poe And Tik',
         excerpt:
             'E-commerce website selling vegan clothing, built with a Laravel backend and a vanilla JavaScript frontend, with Stripe payments.',
-        image: '/img/projects/PoeAndTikApp.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['Laravel', 'JavaScript', 'Stripe', 'HTML5', 'CSS3'],
         groups: ['backend', 'frontend'],
     },
@@ -59,7 +59,7 @@ export const projects: Project[] = [
         title: 'MyDramaList Like',
         excerpt:
             'A platform to discover, search, and organize Korean, Japanese, and Chinese dramas with a focus on an intuitive browsing experience.',
-        image: '/img/projects/MyDramaListLike.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['Laravel', 'JavaScript', 'HTML5', 'CSS3'],
         groups: ['backend', 'frontend'],
     },
@@ -68,7 +68,7 @@ export const projects: Project[] = [
         title: 'Quiz App',
         excerpt:
             'A quiz management platform across multiple topics (manga, soccer, politics, etc.) with creation and customization features.',
-        image: '/img/projects/QuizApp.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['AdonisJS', 'Node.js', 'Vue 3', 'JavaScript', 'HTML5', 'CSS3'],
         groups: ['backend', 'frontend'],
     },
@@ -77,7 +77,7 @@ export const projects: Project[] = [
         title: 'Pokemon Search App',
         excerpt:
             'An interactive Pokédex experience using PokéAPI: search Pokémon and view details like types, stats, and evolutions.',
-        image: '/img/projects/PokemonApp.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['Next.js', 'React', 'TypeScript', 'JavaScript', 'HTML5', 'CSS3'],
         groups: ['frontend'],
     },
@@ -86,7 +86,7 @@ export const projects: Project[] = [
         title: 'Crawler Monitor App',
         excerpt:
             'An advanced SEO crawler for in-depth audits (structure, tags, links, performance) with insights to optimize visibility and SEO.',
-        image: '/img/projects/CrawlerApp.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['Symfony', 'PHP', 'React', 'Python', 'JavaScript', 'HTML5', 'CSS3'],
         groups: ['backend', 'frontend'],
     },
@@ -95,7 +95,7 @@ export const projects: Project[] = [
         title: 'Pencil Pix',
         excerpt:
             'A Python script that converts an image into a pencil sketch using efficient and accessible image processing techniques.',
-        image: '/img/projects/pencil_pix.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['Python'],
         groups: ['backend'],
     },
@@ -104,7 +104,7 @@ export const projects: Project[] = [
         title: 'Streaming Anime',
         excerpt:
             'A web app to discover, filter, and explore a large anime catalog with detailed pages and smooth episode navigation.',
-        image: '/img/projects/StreamingAnime.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['Laravel', 'PHP', 'MySQL', 'JavaScript', 'HTML5', 'CSS3'],
         groups: ['backend', 'frontend'],
     },
@@ -113,7 +113,7 @@ export const projects: Project[] = [
         title: 'Portfolio',
         excerpt:
             'A personal portfolio showcasing completed projects, skills, and progress as a developer through concrete examples.',
-        image: '/img/projects/PortfolioApp.png',
+        image: '/assets/images/portfolio/case-1.jpg',
         tags: ['Next.js', 'React', 'HTML5', 'CSS3'],
         groups: ['frontend'],
     },

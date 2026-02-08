@@ -76,10 +76,19 @@
     background-color: currentColor;
     transform: translate(100%, 50%);
   }
+
+  &:hover .project-link {
+    transform: translate(0, calc(-100% - 0.5rem));
+    opacity: 1;
+  }
 }
 
 .portfolio-item:not(.minimal):not(.interactive) .show-project .project-link a {
   color: var(--button-color);
+}
+
+.portfolio-item:hover:not(.minimal):not(.interactive) .show-project .project-link a {
+  color: var(--primary-color);
 }
 
 .post-holder-tags {
@@ -109,6 +118,11 @@ a.tag,
   padding: 0;
   background: none !important;
   color: inherit !important;
+}
+
+.portfolio-item:not(.interactive):hover .post-holder-tags {
+  transform: translate(0, calc(-100% - 0.5rem));
+  opacity: 0;
 }
 
 .skills {

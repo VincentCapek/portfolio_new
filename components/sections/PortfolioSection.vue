@@ -71,7 +71,25 @@
                     </div>
                 </div>
             </div>
-            <!-- /Filter Items -->
+            <div class="row">
+                <div class="col-12">
+                    <nav>
+                        <ul class="page-numbers">
+                            <li>
+                                <span aria-current="page" class="page-numbers current">1</span>
+                            </li>
+                            <li>
+                                <a class="page-numbers" href="#">2</a>
+                            </li>
+                            <li>
+                                <a class="next page-numbers" href="#">
+                                    <i class="icon-arrow-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
         </div>
     </section>
 </template>

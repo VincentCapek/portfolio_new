@@ -28,3 +28,9 @@
     opacity: 0;
   }
 }
+
+@keyframes gradient-angle {
+  to {
+    --gradient-angle: 1turn;
+  }
+}

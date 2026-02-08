@@ -5,8 +5,17 @@
   border-radius: 10px;
   box-shadow: none;
 
+  &:hover {
+    background: none !important;
+    transform: none !important;
+  }
+
   .card-thumb img {
     transition: all var(--transition-function) var(--transition-duration);
+  }
+
+  &.scale:hover .card-thumb img {
+    transform: var(--transform-scale);
   }
 }
 

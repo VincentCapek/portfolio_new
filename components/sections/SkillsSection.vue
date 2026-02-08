@@ -42,13 +42,12 @@ import counterUp from 'counterup2'
  */
 
 const skills = [
-    { name: 'HTML', percent: 99, img: '/assets/img/content/skill-1.png' },
-    { name: 'CSS', percent: 95, img: '/assets/img/content/skill-2.png' },
-    { name: 'JavaScript', percent: 92, img: '/assets/img/content/skill-3.png' },
-    { name: 'Vue.js', percent: 90, img: '/assets/img/content/skill-4.png' },
-    { name: 'Nuxt', percent: 88, img: '/assets/img/content/skill-5.png' },
-    { name: 'PHP', percent: 93, img: '/assets/img/content/skill-6.png' },
-    { name: 'Laravel', percent: 91, img: '/assets/img/content/skill-7.png' },
+    { name: 'HTML', percent: 99, img: '/assets/images/content/skill-1.png' },
+    { name: 'CSS', percent: 95, img: '/assets/images/content/skill-2.png' },
+    { name: 'JavaScript', percent: 92, img: '/assets/images/content/skill-3.png' },
+    { name: 'Vue.js', percent: 90, img: '/assets/images/content/skill-4.png' },
+    { name: 'Nuxt', percent: 88, img: '/assets/images/content/skill-5.png' },
+    { name: 'PHP', percent: 93, img: '/assets/images/content/skill-6.png' },
 ] as const
 
 let io: IntersectionObserver | null = null
