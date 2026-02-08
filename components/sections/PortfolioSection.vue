@@ -30,12 +30,12 @@
                 </div>
             </div>
 
-            <!-- Filter Items (paged) -->
+            <!-- Filter Items (IMPORTANT: keep ALL projects in the DOM for Shuffle animations) -->
             <div ref="gridEl" class="row items inner filter-items-1 shuffle">
-                <div v-for="p in paginatedProjects" :key="p.slug"
-                    class="col-12 col-md-6 item filter-item-1 shuffle-item" :data-groups="JSON.stringify(p.groups)">
+                <div v-for="p in projects" :key="p.slug" class="col-12 col-md-6 item filter-item-1 shuffle-item"
+                    :data-slug="p.slug" :data-groups="JSON.stringify(p.groups)">
                     <div class="card-item portfolio-item scale">
-                        <NuxtLink :to="`/projects/${p.slug}`">
+                        <NuxtLink :to="`/project/${p.slug}`">
                             <div class="image-holder">
                                 <div class="card-thumb">
                                     <img decoding="async" :src="p.image" class="card-img-top wp-post-image"
@@ -57,7 +57,7 @@
                                     </div>
 
                                     <div class="project-link">
-                                        <NuxtLink :to="`/projects/${p.slug}`">Show Project</NuxtLink>
+                                        <NuxtLink :to="`/project/${p.slug}`">Show Project</NuxtLink>
                                     </div>
                                 </div>
 
@@ -68,17 +68,14 @@
                 </div>
             </div>
 
-            <!-- Pagination (Relome-like markup: current span, other pages are <a>, next is <a>) -->
+            <!-- Pagination (Relome-like markup) -->
             <div v-if="totalPages > 1" class="row">
                 <div class="col-12">
                     <nav aria-label="Portfolio pagination">
                         <ul class="page-numbers">
                             <li v-for="n in totalPages" :key="n">
                                 <span v-if="n === page" aria-current="page" class="page-numbers current">{{ n }}</span>
-
-                                <a v-else class="page-numbers" href="#" @click.prevent="goToPage(n)">
-                                    {{ n }}
-                                </a>
+                                <a v-else class="page-numbers" href="#" @click.prevent="goToPage(n)">{{ n }}</a>
                             </li>
 
                             <li>
@@ -132,9 +129,10 @@ const paginatedProjects = computed(() => {
     return filteredProjects.value.slice(start, start + PER_PAGE)
 })
 
+const visibleSlugs = computed(() => new Set(paginatedProjects.value.map((p) => p.slug)))
+
 function goToPage(n: number) {
-    const clamped = Math.min(Math.max(1, n), totalPages.value)
-    page.value = clamped
+    page.value = Math.min(Math.max(1, n), totalPages.value)
 }
 
 watch(selected, () => {
@@ -144,32 +142,46 @@ watch(selected, () => {
 const gridEl = ref<HTMLElement | null>(null)
 let shuffle: any = null
 
-async function initOrRefreshShuffle() {
+function applyShuffleFilter() {
+    if (!shuffle) return
+
+    const slugs = visibleSlugs.value
+    const group = selected.value
+
+    shuffle.filter((el: Element) => {
+        const slug = (el as HTMLElement).dataset.slug
+        if (!slug || !slugs.has(slug)) return false
+
+        if (group === 'all') return true
+
+        const groupsRaw = (el as HTMLElement).dataset.groups || '[]'
+        const groups = JSON.parse(groupsRaw) as string[]
+        return groups.includes(group)
+    })
+}
+
+onMounted(async () => {
     if (!gridEl.value) return
 
     const { default: Shuffle } = await import('shufflejs')
-
     await nextTick()
-
-    if (shuffle) {
-        shuffle.destroy()
-        shuffle = null
-    }
 
     shuffle = new Shuffle(gridEl.value, {
         itemSelector: '.filter-item-1',
         buffer: 1,
+        speed: 450,
+        easing: 'ease',
     })
 
-    shuffle.filter('all')
-}
-
-onMounted(async () => {
-    await initOrRefreshShuffle()
+    await nextTick()
+    shuffle.update?.()
+    applyShuffleFilter()
 })
 
 watch([selected, page], async () => {
-    await initOrRefreshShuffle()
+    await nextTick()
+    shuffle?.update?.()
+    applyShuffleFilter()
 })
 
 onBeforeUnmount(() => {
