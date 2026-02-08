@@ -250,3 +250,61 @@
     height: inherit;
   }
 }
+
+.tl-form {
+  padding: 3rem;
+  background-color: var(--fill-color);
+  border-radius: 1rem;
+
+  .wpcf7-radio {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.25em;
+  }
+
+  .wpcf7-list-item {
+    margin: 0;
+  }
+
+  .wpcf7-list-item input[type='radio'] {
+    position: absolute;
+    clip: rect(0, 0, 0, 0);
+    pointer-events: none;
+  }
+
+  .wpcf7-list-item input[type='radio']:checked + .wpcf7-list-item-label {
+    background-color: var(--primary-color);
+    border-color: var(--primary-color);
+    color: var(--white-color);
+  }
+
+  .wpcf7-list-item-label {
+    display: inline-flex;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    white-space: nowrap;
+    min-height: 3rem;
+    padding: 0 0.5rem;
+    background-color: transparent;
+    background-image: none;
+    border: 2px solid transparent;
+    border-color: #0c0e23;
+    border-radius: 100px;
+    font-size: 0.9em;
+    font-weight: 500;
+    color: var(--button-color);
+    cursor: pointer;
+    transition: all var(--transition-function) var(--transition-duration);
+  }
+
+  &:not(.outlined) label {
+    background-color: color-mix(in srgb, var(--neutral-color) 10%, transparent);
+  }
+
+  input[type='submit'] {
+    padding: 16px 30px;
+    border-radius: 100px;
+  }
+}

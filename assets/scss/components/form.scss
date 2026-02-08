@@ -1,0 +1,29 @@
+.form-control:focus {
+  color: inherit;
+  box-shadow: inherit;
+}
+
+.button,
+a.button,
+.added_to_cart,
+button[type='submit'],
+input[type='submit'] {
+  display: inline-flex;
+  vertical-align: middle;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  white-space: nowrap;
+  min-height: 3rem;
+  padding: 0 1.25rem;
+  background-color: var(--button-color);
+  background-image: none;
+  border: 2px solid transparent;
+  border-radius: var(--border-radius-md);
+  font-size: 0.95em;
+  font-weight: 600;
+  color: var(--black-color);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all var(--transition-function) var(--transition-duration);
+}

@@ -147,6 +147,133 @@
                             </a>
                         </div>
                     </div>
+                    <div class="col-12 col-md-6">
+                        <!-- Contact Form -->
+                        <div id="tl-contact-form" class="tl-form mt-4 mt-md-0">
+                            <form action="#" class="contact-form">
+                                <div class="form-floating mb-3">
+                                    <p>
+                                        <span class="form-control-wrap">
+                                            <input class="form-control" aria-required="true" placeholder="Name" value=""
+                                                type="text" name="your-name">
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <p>
+                                        <span class="form-control-wrap">
+                                            <input class="form-control" aria-required="true" placeholder="Email Address"
+                                                value="" type="email" name="your-email">
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <p>
+                                        <span class="form-control-wrap">
+                                            <input class="form-control" aria-required="true" placeholder="Phone Number"
+                                                value="" type="tel" name="your-phone">
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <p>
+                                        <label class="form-label">I'm interested in:</label>
+                                        <br>
+                                        <span class="form-control-wrap">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item first">
+                                                    <label>
+                                                        <input type="radio" name="interest" value="Branding">
+                                                        <span class="wpcf7-list-item-label">Branding</span>
+                                                    </label>
+                                                </span>
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="interest" value="Web Design">
+                                                        <span class="wpcf7-list-item-label">Web Design</span>
+                                                    </label>
+                                                </span>
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="interest" value="App Design">
+                                                        <span class="wpcf7-list-item-label">App Design</span>
+                                                    </label>
+                                                </span>
+                                                <span class="wpcf7-list-item last">
+                                                    <label>
+                                                        <input type="radio" name="interest" value="Other">
+                                                        <span class="wpcf7-list-item-label">Other</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="form-group mb-3">
+                                    <p>
+                                        <label class="form-label">My budget is:</label>
+                                        <br>
+                                        <span class="form-control-wrap" data-name="budget">
+                                            <span class="wpcf7-form-control wpcf7-radio">
+                                                <span class="wpcf7-list-item first">
+                                                    <label>
+                                                        <input type="radio" name="budget" value="&lt; 2k">
+                                                        <span class="wpcf7-list-item-label">&lt; 2k</span>
+                                                    </label>
+                                                </span>
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="budget" value="2-5k">
+                                                        <span class="wpcf7-list-item-label">2-5k</span>
+                                                    </label>
+                                                </span>
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="budget" value="5-10k">
+                                                        <span class="wpcf7-list-item-label">5-10k</span>
+                                                    </label>
+                                                </span>
+                                                <span class="wpcf7-list-item">
+                                                    <label>
+                                                        <input type="radio" name="budget" value="10-15k">
+                                                        <span class="wpcf7-list-item-label">10-15k</span>
+                                                    </label>
+                                                </span>
+                                                <span class="wpcf7-list-item last">
+                                                    <label>
+                                                        <input type="radio" name="budget" value="&gt; 20k">
+                                                        <span class="wpcf7-list-item-label">&gt; 20k</span>
+                                                    </label>
+                                                </span>
+                                            </span>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <p>
+                                        <span class="form-control-wrap">
+                                            <input class="form-control" aria-invalid="false"
+                                                placeholder="What is your timeline?" value="" type="text"
+                                                name="timeline">
+                                        </span>
+                                    </p>
+                                </div>
+                                <div class="form-floating mb-3">
+                                    <p>
+                                        <span class="form-control-wrap">
+                                            <textarea cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea"
+                                                aria-invalid="false" placeholder="Message" name="message"></textarea>
+                                        </span>
+                                    </p>
+                                </div>
+                                <div>
+                                    <p>
+                                        <input class="form-submit" type="submit" value="Submit Message">
+                                    </p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
