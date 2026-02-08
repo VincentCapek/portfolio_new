@@ -6,7 +6,7 @@
                     <ul class="tl-widget post-info list-unstyled layout-inline flex-row has-separator">
                         <li>
                             <span v-for="(t, i) in project.tags" :key="t">
-                                <a href="#" @click.prevent>{{ t }}</a>
+                                <a href="/project" @click.prevent>{{ t }}</a>
                                 <span v-if="i < project.tags.length - 1">, </span>
                             </span>
                         </li>

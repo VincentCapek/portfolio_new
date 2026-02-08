@@ -326,8 +326,24 @@ section#slider:not(.bg-inherit) {
   font-weight: 600;
 }
 
+.breadcrumb-item a {
+  font-weight: 600 !important;
+
+  &:not(:hover) {
+    color: inherit;
+  }
+}
+
 .breadcrumb-item + .breadcrumb-item {
   padding-left: var(--bs-breadcrumb-item-padding-x);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+  content: '\f054';
+  font: var(--fa-font-solid);
+  font-size: 0.8em;
+  font-weight: 900;
+  color: var(--secondary-p-color);
 }
 
 .breadcrumb-item.active {
