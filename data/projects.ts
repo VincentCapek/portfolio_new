@@ -31,7 +31,7 @@ export const projects: Project[] = [
         task: 'Build a full event management workflow with real-time updates and an admin interface.',
         role: ['Full-stack development', 'API design', 'UI integration'],
         stack: ['Laravel', 'React', 'Pusher'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/EventApp.png'),
     },
     {
         slug: 'machinools-app',
@@ -45,7 +45,7 @@ export const projects: Project[] = [
         task: 'Deliver an approachable SEO dashboard with clear metrics and actionable insights.',
         role: ['Full-stack development', 'Data visualization', 'UX implementation'],
         stack: ['PHP', 'React'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/Machinools.png'),
     },
     {
         slug: 'cmsrails-app',
@@ -59,7 +59,7 @@ export const projects: Project[] = [
         task: 'Create a CMS with structured categories and an editor-friendly backoffice.',
         role: ['Backend development', 'Admin UX', 'Frontend integration'],
         stack: ['Ruby on Rails', 'Svelte'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/CMSApp.png'),
     },
     {
         slug: 'pics-anime-random-app',
@@ -73,7 +73,7 @@ export const projects: Project[] = [
         task: 'Build a responsive browsing experience for images/GIFs with categories and smooth navigation.',
         role: ['Frontend development', 'UI implementation'],
         stack: ['Vue.js', 'TypeScript'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/PicsRandomApp.png'),
     },
     {
         slug: 'poe-and-tik',
@@ -87,7 +87,7 @@ export const projects: Project[] = [
         task: 'Deliver an e-commerce experience with a secure checkout and Stripe payments.',
         role: ['Full-stack development', 'Payment integration', 'Performance optimization'],
         stack: ['Laravel', 'JavaScript', 'Stripe'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/PoeAndTik.png'),
     },
     {
         slug: 'mydramalist-like',
@@ -101,7 +101,7 @@ export const projects: Project[] = [
         task: 'Create a searchable catalog with detail pages and user-friendly browsing.',
         role: ['Full-stack development', 'Search & filtering', 'UI integration'],
         stack: ['Laravel', 'JavaScript'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/MyDramaListLike.png'),
     },
     {
         slug: 'quiz-app',
@@ -115,7 +115,7 @@ export const projects: Project[] = [
         task: 'Build a quiz builder + player experience with topic management and customization.',
         role: ['Full-stack development', 'Admin features', 'Frontend UX'],
         stack: ['AdonisJS', 'Node.js', 'Vue 3'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/QuizApp.png'),
     },
     {
         slug: 'pokemon-search-app',
@@ -129,7 +129,7 @@ export const projects: Project[] = [
         task: 'Consume PokéAPI to provide a fast search and detailed Pokémon pages.',
         role: ['Frontend development', 'API integration'],
         stack: ['Next.js', 'React', 'TypeScript'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/PokemonSearchApp.png'),
     },
     {
         slug: 'crawler-monitor-app',
@@ -143,7 +143,7 @@ export const projects: Project[] = [
         task: 'Build a crawler + reporting dashboard for technical SEO audits and performance insights.',
         role: ['Architecture', 'Backend development', 'Frontend dashboard'],
         stack: ['Symfony', 'PHP', 'React', 'Python'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/CrawlerMonitorApp.png'),
     },
     {
         slug: 'pencil-pix',
@@ -157,7 +157,7 @@ export const projects: Project[] = [
         task: 'Transform images into pencil-sketch style outputs using a simple and reusable script.',
         role: ['Script development'],
         stack: ['Python'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/PencilPix.png'),
     },
     {
         slug: 'streaming-anime',
@@ -171,7 +171,7 @@ export const projects: Project[] = [
         task: 'Build a catalog with filtering and a smooth browsing experience across anime titles and episodes.',
         role: ['Full-stack development', 'Database modeling', 'UI integration'],
         stack: ['Laravel', 'PHP', 'MySQL', 'JavaScript'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/StreamingAnime.png'),
     },
     {
         slug: 'portfolio',
@@ -185,6 +185,6 @@ export const projects: Project[] = [
         task: 'Showcase projects, skills, and experience with a clean and responsive portfolio layout.',
         role: ['Frontend development', 'UI integration'],
         stack: ['Next.js', 'React'],
-        gallery: makeGallery('/assets/images/portfolio/case-1.jpg'),
+        gallery: makeGallery('/assets/images/portfolio/Portfolio.png'),
     },
 ]
