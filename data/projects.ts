@@ -24,7 +24,7 @@ export const projects: Project[] = [
         title: 'Events App',
         excerpt:
             'Event planning app with an interactive calendar, real-time notifications, and an admin panel to create, edit, and manage events.',
-        image: '/assets/images/portfolio/EventApp.jpg',
+        image: '/assets/images/portfolio/EventApp.png',
         tags: ['Product', 'Dashboard', 'Calendar', 'Realtime'],
         groups: ['backend', 'frontend'],
         taskTitle: 'Task',
@@ -38,7 +38,7 @@ export const projects: Project[] = [
         title: 'Machinools App',
         excerpt:
             "An SEO toolbox for beginners: a simple dashboard and clear analyses to understand and improve a site's visibility on search engines.",
-        image: '/assets/images/portfolio/Machinools.jpg',
+        image: '/assets/images/portfolio/Machinools.png',
         tags: ['SEO', 'Dashboard', 'Analytics', 'Tooling'],
         groups: ['backend', 'frontend'],
         taskTitle: 'Task',
@@ -52,7 +52,7 @@ export const projects: Project[] = [
         title: 'CMSRails App',
         excerpt:
             'A Ruby on Rails CMS designed to create and manage articles with relational categories for structured content organization.',
-        image: '/assets/images/portfolio/CMSRails.jpg',
+        image: '/assets/images/portfolio/CMSApp.png',
         tags: ['CMS', 'Content', 'Backoffice'],
         groups: ['backend', 'frontend'],
         taskTitle: 'Task',
@@ -66,7 +66,7 @@ export const projects: Project[] = [
         title: 'Pics Anime Random App',
         excerpt:
             'An interactive Vue app to explore anime/manga images and GIF albums by category with a responsive and attractive UI.',
-        image: '/assets/images/portfolio/PicsAnimeRandom.jpg',
+        image: '/assets/images/portfolio/PicsRandomApp.png',
         tags: ['Media', 'Gallery', 'UI'],
         groups: ['frontend'],
         taskTitle: 'Task',
@@ -80,7 +80,7 @@ export const projects: Project[] = [
         title: 'Poe & Tik',
         excerpt:
             'E-commerce website selling vegan clothing, built with a Laravel backend and a vanilla JavaScript frontend, with Stripe payments.',
-        image: '/assets/images/portfolio/PoeAndTik.jpg',
+        image: '/assets/images/portfolio/PoeAndTik.png',
         tags: ['E-commerce', 'Payments', 'Checkout'],
         groups: ['backend', 'frontend'],
         taskTitle: 'Task',
@@ -94,7 +94,7 @@ export const projects: Project[] = [
         title: 'MyDramaList Like',
         excerpt:
             'A platform to discover, search, and organize Korean, Japanese, and Chinese dramas with a focus on an intuitive browsing experience.',
-        image: '/assets/images/portfolio/MyDramaListLike.jpg',
+        image: '/assets/images/portfolio/MyDramaListLike.png',
         tags: ['Search', 'Catalog', 'UX'],
         groups: ['backend', 'frontend'],
         taskTitle: 'Task',
@@ -108,7 +108,7 @@ export const projects: Project[] = [
         title: 'Quiz App',
         excerpt:
             'A quiz management platform across multiple topics (manga, soccer, politics, etc.) with creation and customization features.',
-        image: '/assets/images/portfolio/QuizApp.jpg',
+        image: '/assets/images/portfolio/QuizApp.png',
         tags: ['Admin', 'Content', 'Gamification'],
         groups: ['backend', 'frontend'],
         taskTitle: 'Task',
@@ -122,7 +122,7 @@ export const projects: Project[] = [
         title: 'Pokémon Search App',
         excerpt:
             'An interactive Pokédex experience using PokéAPI: search Pokémon and view details like types, stats, and evolutions.',
-        image: '/assets/images/portfolio/PokemonSearchApp.jpg',
+        image: '/assets/images/portfolio/PokemonSearchApp.png',
         tags: ['API', 'Search', 'Frontend'],
         groups: ['frontend'],
         taskTitle: 'Task',
@@ -136,7 +136,7 @@ export const projects: Project[] = [
         title: 'Crawler Monitor App',
         excerpt:
             'An advanced SEO crawler for in-depth audits (structure, tags, links, performance) with insights to optimize visibility and SEO.',
-        image: '/assets/images/portfolio/CrawlerMonitorApp.jpg',
+        image: '/assets/images/portfolio/CrawlerMonitorApp.png',
         tags: ['SEO', 'Crawler', 'Audits', 'Analytics'],
         groups: ['backend', 'frontend'],
         taskTitle: 'Task',
@@ -150,7 +150,7 @@ export const projects: Project[] = [
         title: 'Pencil Pix',
         excerpt:
             'A Python script that converts an image into a pencil sketch using efficient and accessible image processing techniques.',
-        image: '/assets/images/portfolio/PencilPix.jpg',
+        image: '/assets/images/portfolio/PencilPix.png',
         tags: ['Image processing', 'Script', 'CLI'],
         groups: ['backend'],
         taskTitle: 'Task',
@@ -164,7 +164,7 @@ export const projects: Project[] = [
         title: 'Streaming Anime',
         excerpt:
             'A web app to discover, filter, and explore a large anime catalog with detailed pages and smooth episode navigation.',
-        image: '/assets/images/portfolio/StreamingAnime.jpg',
+        image: '/assets/images/portfolio/StreamingAnime.png',
         tags: ['Catalog', 'Filtering', 'Media'],
         groups: ['backend', 'frontend'],
         taskTitle: 'Task',
@@ -178,7 +178,7 @@ export const projects: Project[] = [
         title: 'Portfolio',
         excerpt:
             'A personal portfolio showcasing completed projects, skills, and progress as a developer through concrete examples.',
-        image: '/assets/images/portfolio/Portfolio.jpg',
+        image: '/assets/images/portfolio/Portfolio.png',
         tags: ['Personal', 'Branding', 'Showcase'],
         groups: ['frontend'],
         taskTitle: 'Task',
