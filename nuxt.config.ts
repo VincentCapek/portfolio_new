@@ -19,6 +19,7 @@ export default defineNuxtConfig({
   css: [
     '@fortawesome/fontawesome-free/css/fontawesome.min.css',
     '@fortawesome/fontawesome-free/css/solid.min.css',
+    '@fortawesome/fontawesome-free/css/brands.min.css',
     'bootstrap-icons/font/bootstrap-icons.css',
     'bootstrap/dist/css/bootstrap.min.css',
     'lenis/dist/lenis.css',

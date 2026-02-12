@@ -53,7 +53,7 @@
                     class="col-12 col-md-6 col-lg-4 item filter-item-1 shuffle-item" :data-slug="p.slug"
                     :data-groups="JSON.stringify(p.groups)">
                     <div class="card-item portfolio-item scale overlay metro">
-                        <NuxtLink :to="`/projects/${p.slug}`">
+                        <NuxtLink :to="`/project/${p.slug}`">
                             <div class="image-holder">
                                 <div class="card-thumb">
                                     <img decoding="async" :src="p.image" class="card-img-top wp-post-image"
@@ -75,7 +75,7 @@
                                     </div>
 
                                     <div class="project-link">
-                                        <NuxtLink :to="`/projects/${p.slug}`">Show Project</NuxtLink>
+                                        <NuxtLink :to="`/project/${p.slug}`">Show Project</NuxtLink>
                                     </div>
                                 </div>
 
