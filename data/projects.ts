@@ -167,8 +167,8 @@ export const projects: Project[] = [
         image: '/assets/images/portfolio/StreamingAnime.png',
         tags: ['Catalog', 'Filtering', 'Media'],
         groups: ['backend', 'frontend'],
-        taskTitle: 'Task' ^
-            task: 'Build a catalog with filtering and a smooth browsing experience across anime titles and episodes.',
+        taskTitle: 'Task',
+        task: 'Build a catalog with filtering and a smooth browsing experience across anime titles and episodes.',
         role: ['Full-stack development', 'Database modeling', 'UI integration'],
         stack: ['Laravel', 'PHP', 'MySQL', 'JavaScript'],
         gallery: makeGallery('/assets/images/portfolio/StreamingAnime.png'),

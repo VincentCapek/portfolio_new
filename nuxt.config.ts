@@ -1,12 +1,19 @@
 // nuxt.config.ts
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
+import process from 'node:process'
 
 const rootDir = dirname(fileURLToPath(import.meta.url))
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/google-fonts'],
+  runtimeConfig: {
+    // Server-only secrets (do NOT put these under `public`)
+    mailTo: process.env.MAIL_TO || '',
+    mailUser: process.env.MAIL_USER || '',
+    mailPass: process.env.MAIL_PASS || '',
+  },
 
   // Bootstrap d'abord, puis tes overrides
   css: [
