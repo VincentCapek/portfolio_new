@@ -80,14 +80,14 @@ export const projects: Project[] = [
         title: 'Poe & Tik',
         excerpt:
             'E-commerce website selling vegan clothing, built with a Laravel backend and a vanilla JavaScript frontend, with Stripe payments.',
-        image: '/assets/images/portfolio/PoeAndTik.png',
+        image: '/assets/images/portfolio/PoeAndTikApp.png',
         tags: ['E-commerce', 'Payments', 'Checkout'],
         groups: ['backend', 'frontend'],
         taskTitle: 'Task',
         task: 'Deliver an e-commerce experience with a secure checkout and Stripe payments.',
         role: ['Full-stack development', 'Payment integration', 'Performance optimization'],
         stack: ['Laravel', 'JavaScript', 'Stripe'],
-        gallery: makeGallery('/assets/images/portfolio/PoeAndTik.png'),
+        gallery: makeGallery('/assets/images/portfolio/PoeAndTikApp.png'),
     },
     {
         slug: 'mydramalist-like',
@@ -167,8 +167,8 @@ export const projects: Project[] = [
         image: '/assets/images/portfolio/StreamingAnime.png',
         tags: ['Catalog', 'Filtering', 'Media'],
         groups: ['backend', 'frontend'],
-        taskTitle: 'Task',
-        task: 'Build a catalog with filtering and a smooth browsing experience across anime titles and episodes.',
+        taskTitle: 'Task' ^
+            task: 'Build a catalog with filtering and a smooth browsing experience across anime titles and episodes.',
         role: ['Full-stack development', 'Database modeling', 'UI integration'],
         stack: ['Laravel', 'PHP', 'MySQL', 'JavaScript'],
         gallery: makeGallery('/assets/images/portfolio/StreamingAnime.png'),
