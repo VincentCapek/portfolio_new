@@ -96,25 +96,30 @@
 <script setup lang="ts">
 import { computed, nextTick, onBeforeUnmount, onMounted, ref, watch } from 'vue'
 import { projects } from '@/data/projects'
+import { portfolioFilterDefs } from '@/data/projects'
+import type { ProjectGroup } from '@/data/projects'
 
 const PER_PAGE = 4
 
-const selected = ref<'all' | 'frontend' | 'backend'>('all')
+const selected = ref<ProjectGroup>('all')
 const page = ref(1)
 
 const uid = Math.random().toString(36).slice(2)
 const radioName = `shuffle-filter-${uid}`
 
+/**
+ * Adds "count" to each filter definition based on the project groups.
+ * Keeps your HTML intact: same structure, just swaps the v-for source.
+ */
 const filters = computed(() => {
-    const total = projects.length
-    const frontend = projects.filter((p) => p.groups.includes('frontend')).length
-    const backend = projects.filter((p) => p.groups.includes('backend')).length
+    return portfolioFilterDefs.map((f) => {
+        const count =
+            f.value === 'all'
+                ? projects.length
+                : projects.filter((p) => p.groups.includes(f.value as ProjectGroup)).length
 
-    return [
-        { value: 'all', label: 'All', count: total },
-        { value: 'frontend', label: 'Frontend', count: frontend },
-        { value: 'backend', label: 'Backend', count: backend },
-    ]
+        return { ...f, count }
+    })
 })
 
 const filteredProjects = computed(() => {
