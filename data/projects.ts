@@ -48,7 +48,7 @@ export const projects: Project[] = [
         title: 'Events App',
         excerpt:
             'Event planning app with an interactive calendar, real-time notifications, and an admin panel to create, edit, and manage events.',
-        image: '/assets/images/portfolio/EventApp.png',
+        image: '/assets/images/portfolio/EventApp-thumb.png',
         tags: ['Product', 'Dashboard', 'Calendar', 'Realtime'],
         groups: ['fullstack', 'backend', 'frontend', 'dashboard', 'realtime'],
         taskTitle: 'Task',
@@ -62,7 +62,7 @@ export const projects: Project[] = [
         title: 'Machinools App',
         excerpt:
             "An SEO toolbox for beginners: a simple dashboard and clear analyses to understand and improve a site's visibility on search engines.",
-        image: '/assets/images/portfolio/Machinools.png',
+        image: '/assets/images/portfolio/Machinools-thumb.png',
         tags: ['Tooling', 'Dashboard', 'Analytics'],
         groups: ['fullstack', 'backend', 'frontend', 'tooling', 'dashboard', 'analytics'],
         taskTitle: 'Task',
@@ -76,7 +76,7 @@ export const projects: Project[] = [
         title: 'CMSRails App',
         excerpt:
             'A Ruby on Rails CMS designed to create and manage articles with relational categories for structured content organization.',
-        image: '/assets/images/portfolio/CMSApp.png',
+        image: '/assets/images/portfolio/CMSApp-thumb.png',
         tags: ['CMS', 'Content', 'Backoffice'],
         groups: ['fullstack', 'backend', 'frontend', 'cms', 'content'],
         taskTitle: 'Task',
@@ -90,7 +90,7 @@ export const projects: Project[] = [
         title: 'Pics Anime Random App',
         excerpt:
             'An interactive Vue app to explore anime/manga images and GIF albums by category with a responsive and attractive UI.',
-        image: '/assets/images/portfolio/PicsRandomApp.png',
+        image: '/assets/images/portfolio/PicsRandomApp-thumb.png',
         tags: ['Media', 'Gallery'],
         groups: ['frontend', 'media'],
         taskTitle: 'Task',
@@ -104,7 +104,7 @@ export const projects: Project[] = [
         title: 'Poe & Tik',
         excerpt:
             'E-commerce website selling vegan clothing, built with a Laravel backend and a vanilla JavaScript frontend, with Stripe payments.',
-        image: '/assets/images/portfolio/PoeAndTikApp.png',
+        image: '/assets/images/portfolio/PoeAndTikApp-thumb.png',
         tags: ['E-commerce', 'Payments', 'Checkout'],
         groups: ['fullstack', 'backend', 'frontend', 'ecommerce', 'payments'],
         taskTitle: 'Task',
@@ -118,7 +118,7 @@ export const projects: Project[] = [
         title: 'MyDramaList Like',
         excerpt:
             'A platform to discover, search, and organize Korean, Japanese, and Chinese dramas with a focus on an intuitive browsing experience.',
-        image: '/assets/images/portfolio/MyDramaListLike.png',
+        image: '/assets/images/portfolio/MyDramaListLike-thumb.png',
         tags: ['Catalog', 'Search'],
         groups: ['fullstack', 'backend', 'frontend', 'catalog', 'search'],
         taskTitle: 'Task',
@@ -132,7 +132,7 @@ export const projects: Project[] = [
         title: 'Quiz App',
         excerpt:
             'A quiz management platform across multiple topics (manga, soccer, politics, etc.) with creation and customization features.',
-        image: '/assets/images/portfolio/QuizApp.png',
+        image: '/assets/images/portfolio/QuizApp-thumb.png',
         tags: ['Admin', 'Content', 'Gamification'],
         groups: ['fullstack', 'backend', 'frontend', 'platform', 'content'],
         taskTitle: 'Task',
@@ -146,21 +146,21 @@ export const projects: Project[] = [
         title: 'Pokémon Search App',
         excerpt:
             'An interactive Pokédex experience using PokéAPI: search Pokémon and view details like types, stats, and evolutions.',
-        image: '/assets/images/portfolio/PokemonSearchApp.png',
+        image: '/assets/images/portfolio/PokemonApp-thumb.png',
         tags: ['API', 'Search'],
         groups: ['frontend', 'api', 'search'],
         taskTitle: 'Task',
         task: 'Consume PokéAPI to provide a fast search and detailed Pokémon pages.',
         role: ['Frontend development', 'API integration'],
         stack: ['Next.js', 'React', 'TypeScript'],
-        gallery: makeGallery('/assets/images/portfolio/PokemonSearchApp.png'),
+        gallery: makeGallery('/assets/images/portfolio/PokemonApp.png'),
     },
     {
         slug: 'crawler-monitor-app',
         title: 'Crawler Monitor App',
         excerpt:
             'An advanced crawler for in-depth audits (structure, tags, links, performance) with insights to optimize visibility.',
-        image: '/assets/images/portfolio/CrawlerApp.png',
+        image: '/assets/images/portfolio/CrawlerApp-thumb.png',
         tags: ['Crawler', 'Audits', 'Analytics'],
         groups: ['fullstack', 'backend', 'frontend', 'tooling', 'crawler', 'dashboard', 'analytics'],
         taskTitle: 'Task',
@@ -174,7 +174,7 @@ export const projects: Project[] = [
         title: 'Pencil Pix',
         excerpt:
             'A Python script that converts an image into a pencil sketch using efficient and accessible image processing techniques.',
-        image: '/assets/images/portfolio/pencil_pix.png',
+        image: '/assets/images/portfolio/pencil_pix-thumb.png',
         tags: ['Image processing', 'Script', 'CLI'],
         groups: ['backend', 'tooling', 'script'],
         taskTitle: 'Task',
@@ -188,7 +188,7 @@ export const projects: Project[] = [
         title: 'Streaming Anime',
         excerpt:
             'A web app to discover, filter, and explore a large anime catalog with detailed pages and smooth episode navigation.',
-        image: '/assets/images/portfolio/StreamingAnime.png',
+        image: '/assets/images/portfolio/StreamingAnime-thumb.png',
         tags: ['Catalog', 'Filtering', 'Media'],
         groups: ['fullstack', 'backend', 'frontend', 'catalog', 'media', 'search'],
         taskTitle: 'Task',
@@ -202,14 +202,14 @@ export const projects: Project[] = [
         title: 'Portfolio',
         excerpt:
             'A personal portfolio showcasing completed projects, skills, and progress as a developer through concrete examples.',
-        image: '/assets/images/portfolio/Portfolio.png',
+        image: '/assets/images/portfolio/PortfolioApp-thumb.png',
         tags: ['Personal', 'Showcase'],
         groups: ['frontend', 'showcase'],
         taskTitle: 'Task',
         task: 'Showcase projects, skills, and experience with a clean and responsive portfolio layout.',
         role: ['Frontend development'],
         stack: ['Nuxt', 'Vue', 'TypeScript'],
-        gallery: makeGallery('/assets/images/portfolio/Portfolio.png'),
+        gallery: makeGallery('/assets/images/portfolio/PortfolioApp.png'),
     },
 ]
 

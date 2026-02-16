@@ -107,7 +107,6 @@
                     </nav>
                 </div>
             </div>
-
         </div>
     </section>
 </template>
