@@ -61,13 +61,44 @@
                         </li>
                     </ul>
 
-                    <a v-if="project.liveUrl" :href="project.liveUrl" target="_blank" rel="noopener noreferrer"
-                        class="tl-widget button swap-icon text text-decoration-none mt-3">
-                        Live Site
-                        <span class="icon">
-                            <i class="icon-arrow-right"></i>
-                        </span>
-                    </a>
+                    <div class="d-flex align-items-center flex-wrap justify-content-end gap-2 mt-3">
+                        <div class="contact">
+                            <div class="tl-widget social-icons icon-box justify-content-start gap-0">
+                                <a v-if="project.githubUrl" :href="project.githubUrl" target="_blank"
+                                    rel="noopener noreferrer" class="icon-group stacked shape-circle social-icon"
+                                    aria-label="GitHub" title="GitHub">
+                                    <span class="icon icon-animated">
+                                        <i class="fa-brands fa-github" aria-hidden="true" />
+                                    </span>
+                                    <span class="icon icon-animated">
+                                        <i class="fa-brands fa-github" aria-hidden="true" />
+                                    </span>
+                                </a>
+
+                                <a v-if="project.gitlabUrl" :href="project.gitlabUrl" target="_blank"
+                                    rel="noopener noreferrer" class="icon-group stacked shape-circle social-icon"
+                                    aria-label="GitLab" title="GitLab">
+                                    <span class="icon icon-animated">
+                                        <i class="fa-brands fa-gitlab" aria-hidden="true" />
+                                    </span>
+                                    <span class="icon icon-animated">
+                                        <i class="fa-brands fa-gitlab" aria-hidden="true" />
+                                    </span>
+                                </a>
+
+                                <a v-if="project.youtubeUrl" :href="project.youtubeUrl" target="_blank"
+                                    rel="noopener noreferrer" class="icon-group stacked shape-circle social-icon"
+                                    aria-label="YouTube" title="YouTube">
+                                    <span class="icon icon-animated">
+                                        <i class="fa-brands fa-youtube" aria-hidden="true" />
+                                    </span>
+                                    <span class="icon icon-animated">
+                                        <i class="fa-brands fa-youtube" aria-hidden="true" />
+                                    </span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
 

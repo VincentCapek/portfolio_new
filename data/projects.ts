@@ -37,6 +37,9 @@ export type Project = {
     stack?: string[]
     client?: string
     liveUrl?: string
+    githubUrl?: string
+    gitlabUrl?: string
+    youtubeUrl?: string
     gallery?: string[]
 }
 
@@ -55,6 +58,7 @@ export const projects: Project[] = [
         task: 'Build a full event management workflow with real-time updates and an admin interface.',
         role: ['Full-stack development', 'API design', 'UI integration'],
         stack: ['Laravel', 'React', 'Pusher'],
+        githubUrl: 'https://github.com/ZAomineZ/eventsprojectlaravel',
         gallery: makeGallery('/assets/images/portfolio/EventApp.png'),
     },
     {
@@ -69,6 +73,7 @@ export const projects: Project[] = [
         task: 'Deliver an approachable dashboard with clear metrics and actionable insights.',
         role: ['Full-stack development', 'Data visualization'],
         stack: ['PHP', 'React'],
+        githubUrl: 'https://github.com/ZAomineZ/seo_project',
         gallery: makeGallery('/assets/images/portfolio/Machinools.png'),
     },
     {
@@ -83,6 +88,7 @@ export const projects: Project[] = [
         task: 'Create a CMS with structured categories and an editor-friendly backoffice.',
         role: ['Backend development', 'Frontend integration'],
         stack: ['Ruby on Rails', 'Svelte'],
+        githubUrl: 'https://github.com/ZAomineZ/CMSRails',
         gallery: makeGallery('/assets/images/portfolio/CMSApp.png'),
     },
     {
@@ -97,6 +103,7 @@ export const projects: Project[] = [
         task: 'Build a responsive browsing experience for images/GIFs with categories and smooth navigation.',
         role: ['Frontend development'],
         stack: ['Vue.js', 'TypeScript'],
+        githubUrl: 'https://github.com/ZAomineZ/waifu_album',
         gallery: makeGallery('/assets/images/portfolio/PicsRandomApp.png'),
     },
     {
@@ -111,6 +118,7 @@ export const projects: Project[] = [
         task: 'Deliver an e-commerce experience with a secure checkout and Stripe payments.',
         role: ['Full-stack development', 'Payment integration'],
         stack: ['Laravel', 'JavaScript', 'Stripe'],
+        gitlabUrl: 'https://gitlab.com/Bluup-Aomine/ecommerce_laravel',
         gallery: makeGallery('/assets/images/portfolio/PoeAndTikApp.png'),
     },
     {
@@ -125,6 +133,7 @@ export const projects: Project[] = [
         task: 'Create a searchable catalog with detail pages and user-friendly browsing.',
         role: ['Full-stack development', 'Search & filtering'],
         stack: ['Laravel', 'JavaScript'],
+        // (No github_url/gitlab_url provided in your old data)
         gallery: makeGallery('/assets/images/portfolio/MyDramaListLike.png'),
     },
     {
@@ -139,6 +148,7 @@ export const projects: Project[] = [
         task: 'Build a quiz builder + player experience with topic management and customization.',
         role: ['Full-stack development', 'Admin features'],
         stack: ['AdonisJS', 'Node.js', 'Vue 3'],
+        githubUrl: 'https://github.com/ZAomineZ/quizz_app',
         gallery: makeGallery('/assets/images/portfolio/QuizApp.png'),
     },
     {
@@ -153,6 +163,7 @@ export const projects: Project[] = [
         task: 'Consume PokéAPI to provide a fast search and detailed Pokémon pages.',
         role: ['Frontend development', 'API integration'],
         stack: ['Next.js', 'React', 'TypeScript'],
+        githubUrl: 'https://github.com/ZAomineZ/NextPokemon',
         gallery: makeGallery('/assets/images/portfolio/PokemonApp.png'),
     },
     {
@@ -167,6 +178,7 @@ export const projects: Project[] = [
         task: 'Build a crawler + reporting dashboard for technical audits and performance insights.',
         role: ['Architecture', 'Backend development', 'Frontend dashboard'],
         stack: ['Symfony', 'PHP', 'React', 'Python'],
+        youtubeUrl: 'https://www.youtube.com/watch?v=nm7cItMuZCo', // ✅ from old youtube_url
         gallery: makeGallery('/assets/images/portfolio/CrawlerApp.png'),
     },
     {
@@ -181,6 +193,7 @@ export const projects: Project[] = [
         task: 'Transform images into pencil-sketch style outputs using a simple and reusable script.',
         role: ['Script development'],
         stack: ['Python'],
+        githubUrl: 'https://github.com/ZAomineZ/pencil_pix',
         gallery: makeGallery('/assets/images/portfolio/PencilPix.png'),
     },
     {
@@ -195,6 +208,7 @@ export const projects: Project[] = [
         task: 'Build a catalog with filtering and a smooth browsing experience across titles and episodes.',
         role: ['Full-stack development', 'Database modeling'],
         stack: ['Laravel', 'PHP', 'MySQL', 'JavaScript'],
+        githubUrl: 'https://github.com/ZAomineZ/laravel_streaming',
         gallery: makeGallery('/assets/images/portfolio/StreamingAnime.png'),
     },
     {
@@ -209,14 +223,11 @@ export const projects: Project[] = [
         task: 'Showcase projects, skills, and experience with a clean and responsive portfolio layout.',
         role: ['Frontend development'],
         stack: ['Nuxt', 'Vue', 'TypeScript'],
+        githubUrl: 'https://github.com/ZAomineZ/portfolio',
         gallery: makeGallery('/assets/images/portfolio/PortfolioApp.png'),
     },
 ]
 
-/**
- * Optional: if you want your filter menu to expose more categories.
- * Keep the UI small (6 items max), but still powered by the richer groups above.
- */
 export const portfolioFilterDefs = [
     { value: 'all', label: 'All' },
     { value: 'fullstack', label: 'Full-stack' },
