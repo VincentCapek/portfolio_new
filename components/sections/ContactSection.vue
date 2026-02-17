@@ -31,7 +31,7 @@ import ContactSocialIcons from '@components/contact/ContactSocialIcons.vue';
                                             </path>
                                         </svg>
                                     </span>
-                                    <span class="icon-list-text">+1.890.473.5102</span>
+                                    <span class="icon-list-text">07 69 21 61 37</span>
                                 </a>
                             </li>
                             <!-- Icon List Item -->
@@ -48,6 +48,7 @@ import ContactSocialIcons from '@components/contact/ContactSocialIcons.vue';
                                     </span>
                                     <span class="icon-list-text">Manosque, France</span>
                                 </a>
+
                             </li>
                             <!-- Icon List Item -->
                             <li class="icon-list-item">

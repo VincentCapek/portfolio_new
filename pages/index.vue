@@ -33,4 +33,27 @@ import PortfolioSection from '@components/sections/PortfolioSection.vue';
 import SkillsSection from '@components/sections/SkillsSection.vue';
 import ApproachSection from '@components/sections/ApproachSection.vue';
 import ContactSection from '@components/sections/ContactSection.vue';
+
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
+const title = 'Vincent Capek — Freelance Full-Stack Developer (Laravel & Nuxt)'
+const description =
+  'Freelance full-stack developer specializing in Laravel, Vue/Nuxt and TypeScript. I build fast, maintainable web apps and dashboards end-to-end.'
+
+useSeoMeta({
+  title,
+  description,
+  ogTitle: title,
+  ogDescription: description,
+  ogType: 'website',
+  ogUrl: siteUrl,
+  twitterCard: 'summary_large_image',
+  twitterTitle: title,
+  twitterDescription: description,
+})
+
+useHead({
+  link: [{ rel: 'canonical', href: siteUrl }],
+})
 </script>

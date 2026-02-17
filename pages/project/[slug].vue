@@ -131,6 +131,8 @@ import { computed } from 'vue'
 import { projects } from '@/data/projects'
 
 const route = useRoute()
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
 
 const slug = computed(() => String(route.params.slug || ''))
 
@@ -140,5 +142,72 @@ const galleryImages = computed(() => {
     if (!project.value) return []
     // Fallback: if you don't have a gallery, reuse the cover image.
     return project.value.gallery?.length ? project.value.gallery : [project.value.image].filter(Boolean)
+})
+
+
+const canonical = computed(() => new URL(route.fullPath as string, siteUrl as string).toString())
+
+function stripHtml(input: string) {
+    return input.replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim()
+}
+
+watchEffect(() => {
+    const p = project.value
+
+    // Fallback SEO if not found
+    if (!p) {
+        const notFoundTitle = 'Project not found · Vincent Capek'
+        const notFoundDesc = 'This project does not exist. Browse the portfolio to discover other projects.'
+
+        useSeoMeta({
+            title: notFoundTitle,
+            description: notFoundDesc,
+            ogTitle: notFoundTitle,
+            ogDescription: notFoundDesc,
+            ogType: 'website',
+            ogUrl: canonical.value,
+            twitterCard: 'summary_large_image',
+            twitterTitle: notFoundTitle,
+            twitterDescription: notFoundDesc,
+        })
+
+        useHead({
+            link: [{ rel: 'canonical', href: canonical.value }],
+            meta: [{ name: 'robots', content: 'noindex, follow' }],
+        })
+
+        return
+    }
+
+    // Build dynamic SEO from project data
+    const title = `${p.title} · Project · Vincent Capek`
+
+    const rawDesc = p.description ? stripHtml(p.description) : p.excerpt
+    const description = rawDesc.length > 160 ? `${rawDesc.slice(0, 157)}…` : rawDesc
+
+    // Use first gallery image if possible, otherwise cover image
+    const ogImage = (galleryImages.value?.[0] || p.image || '').trim()
+
+    useSeoMeta({
+        title,
+        description,
+        ogTitle: title,
+        ogDescription: description,
+        ogType: 'article',
+        ogUrl: canonical.value,
+        ...(ogImage
+            ? {
+                ogImage,
+                twitterImage: ogImage,
+            }
+            : {}),
+        twitterCard: 'summary_large_image',
+        twitterTitle: title,
+        twitterDescription: description,
+    })
+
+    useHead({
+        link: [{ rel: 'canonical', href: canonical.value }],
+    })
 })
 </script>

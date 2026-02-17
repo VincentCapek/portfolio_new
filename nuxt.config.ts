@@ -9,6 +9,9 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ['@nuxtjs/google-fonts'],
   runtimeConfig: {
+    public: {
+      siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    },
     // Server-only secrets (do NOT put these under `public`)
     mailTo: process.env.MAIL_TO || '',
     mailUser: process.env.MAIL_USER || '',

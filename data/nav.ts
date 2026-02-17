@@ -4,9 +4,9 @@ export type NavItem =
 
 export const navItems: NavItem[] = [
     { label: 'Services', to: '/#services' },
-    { label: 'Resume', to: '/#resume' },
-    { label: 'Works', to: '/#works' },
+    { label: 'Expertise', to: '/#expertise' },
+    { label: 'Works', to: '/#portfolio' },
     { label: 'Skills', to: '/#skills' },
-    { label: 'Testimonials', to: '/#testimonials' },
+    { label: 'Approach', to: '/#approach' },
     { label: 'Contact', to: '/#contact' },
 ]

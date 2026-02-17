@@ -117,6 +117,32 @@ import { projects } from '@/data/projects'
 import { portfolioFilterDefs } from '@/data/projects'
 import type { ProjectGroup } from '@/data/projects'
 
+const route = useRoute()
+const config = useRuntimeConfig()
+const siteUrl = config.public.siteUrl
+
+const canonical = computed(() => new URL(route.fullPath as string, siteUrl as string).toString())
+
+const title = 'Portfolio — Projects · Vincent Capek'
+const description =
+    'Explore my projects: full-stack web apps, dashboards, real-time features, e-commerce integrations, and more — built with Laravel, Vue/Nuxt and TypeScript.'
+
+useSeoMeta({
+    title,
+    description,
+    ogTitle: title,
+    ogDescription: description,
+    ogType: 'website',
+    ogUrl: canonical,
+    twitterCard: 'summary_large_image',
+    twitterTitle: title,
+    twitterDescription: description,
+})
+
+useHead({
+    link: [{ rel: 'canonical', href: canonical }],
+})
+
 const PER_PAGE = 6 // 3 columns layout looks good with 6 per page (2 rows)
 
 const selected = ref<'all' | 'frontend' | 'backend'>('all')
