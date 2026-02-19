@@ -194,7 +194,7 @@ export const projects: Project[] = [
         role: ['Script development'],
         stack: ['Python'],
         githubUrl: 'https://github.com/ZAomineZ/pencil_pix',
-        gallery: makeGallery('/assets/images/portfolio/PencilPix.png'),
+        gallery: makeGallery('/assets/images/portfolio/pencil_pix.png'),
     },
     {
         slug: 'streaming-anime',
