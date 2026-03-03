@@ -1,6 +1,7 @@
 import nodemailer from 'nodemailer'
 import { z } from 'zod'
 
+// Define the schema for the contact form
 const ContactSchema = z.object({
     name: z.string().min(3).max(255),
     email: z.string().email().min(5).max(255),
