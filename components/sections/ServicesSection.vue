@@ -9,8 +9,8 @@ type ServiceItem = {
 
 const services: ServiceItem[] = [
     {
-        title: 'UX & UI',
-        description: 'Designing interfaces that are intuitive, efficient, and enjoyable to use.',
+        title: 'Mockup Integration',
+        description: 'I can integrate your Figma (or any design) into a responsive, pixel-clean website with reusable components and clean HTML/CSS.',
         iconSrc: '/assets/images/content/icon-1.webp',
         iconAlt: 'UX & UI',
         href: '#',
