@@ -4,10 +4,10 @@
             <div class="row">
                 <div class="col-12">
                     <div class="footer-content text-center py-4">
-                        <!-- Copyright -->
                         <div class="copyright">
-                            ©2025 Relome, All Rights Reserved By
-                            <a href="https://relome.fr" target="_blank">Relome</a>
+                            ©{{ year }} Vincent Capek — All Rights Reserved.
+                            <a href="https://github.com/VincentCapek" target="_blank"
+                                rel="noopener noreferrer">GitHub</a>
                         </div>
                     </div>
                 </div>
@@ -15,3 +15,7 @@
         </div>
     </footer>
 </template>
+
+<script setup lang="ts">
+const year = new Date().getFullYear()
+</script>
