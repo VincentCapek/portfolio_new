@@ -10,7 +10,7 @@
 
                             <div class="aos-init aos-animate">
                                 <div class="breadcrumb">
-                                    <nav class="relome-breadcrumbs" aria-label="breadcrumb">
+                                    <nav class="relome-breadcrumbs" aria-label="breadcru mb">
                                         <ol class="breadcrumb">
                                             <li class="breadcrumb-item">
                                                 <NuxtLink to="/" rel="nofollow">Home</NuxtLink>
