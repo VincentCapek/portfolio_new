@@ -11,10 +11,21 @@ export default defineNuxtConfig({
   modules: ['@nuxtjs/google-fonts', '@nuxtjs/robots', '@nuxtjs/sitemap', 'nuxt-site-config'],
 
   sitemap: {
-    urls: projects.map((p) => ({
-      loc: `/project/${p.slug}`,
-      ...(p.date ? { lastmod: p.date } : {}),
-    })),
+    autoLastmod: false, // you control the real update dates yourself
+    urls: () => {
+      return projects.map((project) => ({
+        loc: `/project/${project.slug}`,
+        lastmod: project.updatedAt?.toISOString(),
+        images: project.image
+          ? [
+            {
+              loc: project.image,
+              title: project.slug,
+            },
+          ]
+          : [],
+      }))
+    },
   },
   runtimeConfig: {
     public: {
@@ -31,7 +42,7 @@ export default defineNuxtConfig({
     name: 'Vincent Capek',
   },
 
-  // Bootstrap d'abord, puis tes overrides
+  // Bootstrap first, then your overrides
   css: [
     '@fortawesome/fontawesome-free/css/fontawesome.min.css',
     '@fortawesome/fontawesome-free/css/solid.min.css',
@@ -48,7 +59,7 @@ export default defineNuxtConfig({
     },
     display: 'swap',
     preconnect: true,
-    download: false, // true si tu veux télécharger/servir en local
+    download: false, // set to true if you want to download/serve them locally
   },
 
   alias: {
@@ -57,7 +68,7 @@ export default defineNuxtConfig({
     '@server': resolve(rootDir, 'server'),
     '@utils': resolve(rootDir, 'utils'),
 
-    // si tu utilises Pinia, Nuxt standard c'est "stores/" (pas "store/")
+    // if you use Pinia, the standard Nuxt directory is "stores/" (not "store/")
     '@stores': resolve(rootDir, 'stores'),
   },
 })

@@ -41,6 +41,7 @@ export type Project = {
     gitlabUrl?: string
     youtubeUrl?: string
     gallery?: string[]
+    updatedAt?: Date
 }
 
 const makeGallery = (cover: string): string[] => [cover]
@@ -60,6 +61,7 @@ export const projects: Project[] = [
         stack: ['Laravel', 'React', 'Pusher'],
         githubUrl: 'https://github.com/ZAomineZ/eventsprojectlaravel',
         gallery: makeGallery('/assets/images/portfolio/EventApp.png'),
+        updatedAt: new Date('2020-01-15'),
     },
     {
         slug: 'machinools-app',
@@ -75,6 +77,7 @@ export const projects: Project[] = [
         stack: ['PHP', 'React'],
         githubUrl: 'https://github.com/ZAomineZ/seo_project',
         gallery: makeGallery('/assets/images/portfolio/Machinools.png'),
+        updatedAt: new Date('2019-05-14'),
     },
     {
         slug: 'cmsrails-app',
@@ -90,6 +93,7 @@ export const projects: Project[] = [
         stack: ['Ruby on Rails', 'Svelte'],
         githubUrl: 'https://github.com/ZAomineZ/CMSRails',
         gallery: makeGallery('/assets/images/portfolio/CMSApp.png'),
+        updatedAt: new Date('2020-11-05'),
     },
     {
         slug: 'pics-anime-random-app',
@@ -105,6 +109,7 @@ export const projects: Project[] = [
         stack: ['Vue.js', 'TypeScript'],
         githubUrl: 'https://github.com/ZAomineZ/waifu_album',
         gallery: makeGallery('/assets/images/portfolio/PicsRandomApp.png'),
+        updatedAt: new Date('2022-09-25'),
     },
     {
         slug: 'poe-and-tik',
@@ -120,6 +125,7 @@ export const projects: Project[] = [
         stack: ['Laravel', 'JavaScript', 'Stripe'],
         gitlabUrl: 'https://gitlab.com/Bluup-Aomine/ecommerce_laravel',
         gallery: makeGallery('/assets/images/portfolio/PoeAndTikApp.png'),
+        updatedAt: new Date('2020-05-16'),
     },
     {
         slug: 'mydramalist-like',
@@ -135,6 +141,7 @@ export const projects: Project[] = [
         stack: ['Laravel', 'JavaScript'],
         // (No github_url/gitlab_url provided in your old data)
         gallery: makeGallery('/assets/images/portfolio/MyDramaListLike.png'),
+        updatedAt: new Date('2022-07-20'),
     },
     {
         slug: 'quiz-app',
@@ -150,6 +157,7 @@ export const projects: Project[] = [
         stack: ['AdonisJS', 'Node.js', 'Vue 3'],
         githubUrl: 'https://github.com/ZAomineZ/quizz_app',
         gallery: makeGallery('/assets/images/portfolio/QuizApp.png'),
+        updatedAt: new Date('2022-12-18'),
     },
     {
         slug: 'pokemon-search-app',
@@ -165,6 +173,7 @@ export const projects: Project[] = [
         stack: ['Next.js', 'React', 'TypeScript'],
         githubUrl: 'https://github.com/ZAomineZ/NextPokemon',
         gallery: makeGallery('/assets/images/portfolio/PokemonApp.png'),
+        updatedAt: new Date('2022-01-26'),
     },
     {
         slug: 'crawler-monitor-app',
@@ -180,6 +189,7 @@ export const projects: Project[] = [
         stack: ['Symfony', 'PHP', 'React', 'Python'],
         youtubeUrl: 'https://www.youtube.com/watch?v=nm7cItMuZCo', // ✅ from old youtube_url
         gallery: makeGallery('/assets/images/portfolio/CrawlerApp.png'),
+        updatedAt: new Date('2022-02-23'),
     },
     {
         slug: 'pencil-pix',
@@ -195,6 +205,7 @@ export const projects: Project[] = [
         stack: ['Python'],
         githubUrl: 'https://github.com/ZAomineZ/pencil_pix',
         gallery: makeGallery('/assets/images/portfolio/pencil_pix.png'),
+        updatedAt: new Date('2024-11-18'),
     },
     {
         slug: 'streaming-anime',
@@ -210,6 +221,7 @@ export const projects: Project[] = [
         stack: ['Laravel', 'PHP', 'MySQL', 'JavaScript'],
         githubUrl: 'https://github.com/ZAomineZ/laravel_streaming',
         gallery: makeGallery('/assets/images/portfolio/StreamingAnime.png'),
+        updatedAt: new Date('2022-12-06'),
     },
     {
         slug: 'portfolio',
@@ -225,6 +237,7 @@ export const projects: Project[] = [
         stack: ['Nuxt', 'Vue', 'TypeScript'],
         githubUrl: 'https://github.com/ZAomineZ/portfolio',
         gallery: makeGallery('/assets/images/portfolio/PortfolioApp.png'),
+        updatedAt: new Date('2026-02-10'),
     },
 ]
 
