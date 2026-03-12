@@ -2,12 +2,20 @@
 import { fileURLToPath } from 'node:url'
 import { dirname, resolve } from 'node:path'
 import process from 'node:process'
+import { projects } from './data/projects'
 
 const rootDir = dirname(fileURLToPath(import.meta.url))
 
 export default defineNuxtConfig({
   devtools: { enabled: true },
-  modules: ['@nuxtjs/google-fonts'],
+  modules: ['@nuxtjs/google-fonts', '@nuxtjs/robots', '@nuxtjs/sitemap', 'nuxt-site-config'],
+
+  sitemap: {
+    urls: projects.map((p) => ({
+      loc: `/project/${p.slug}`,
+      ...(p.date ? { lastmod: p.date } : {}),
+    })),
+  },
   runtimeConfig: {
     public: {
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
@@ -16,6 +24,11 @@ export default defineNuxtConfig({
     mailTo: process.env.MAIL_TO || '',
     mailUser: process.env.MAIL_USER || '',
     mailPass: process.env.MAIL_PASS || '',
+  },
+
+  site: {
+    url: process.env.NUXT_PUBLIC_SITE_URL || 'http://localhost:3000',
+    name: 'Vincent Capek',
   },
 
   // Bootstrap d'abord, puis tes overrides
