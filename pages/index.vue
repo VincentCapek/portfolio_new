@@ -37,9 +37,9 @@ import ContactSection from '@components/sections/ContactSection.vue';
 const config = useRuntimeConfig()
 const siteUrl = config.public.siteUrl
 
-const title = 'Vincent Capek — Freelance Full-Stack Developer (Laravel & Nuxt)'
+const title = 'Vincent Capek — Full-Stack Developer (Laravel & Nuxt)'
 const description =
-  'Freelance full-stack developer specializing in Laravel, Vue/Nuxt and TypeScript. I build fast, maintainable web apps and dashboards end-to-end.'
+  'Full-stack developer specializing in Laravel, Vue/Nuxt and TypeScript. I build fast, maintainable web apps and dashboards end-to-end, fully remote.'
 
 useSeoMeta({
   title,
