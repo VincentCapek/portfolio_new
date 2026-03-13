@@ -180,7 +180,7 @@ watchEffect(() => {
     }
 
     // Build dynamic SEO from project data
-    const title = `${p.title} · Project · Vincent Capek`
+    const title = `Portfolio Vincent Capek - ${p.title}`
 
     const rawDesc = p.description ? stripHtml(p.description) : p.excerpt
     const description = rawDesc.length > 160 ? `${rawDesc.slice(0, 157)}…` : rawDesc
