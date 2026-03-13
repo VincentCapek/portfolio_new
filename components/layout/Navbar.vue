@@ -8,7 +8,9 @@
             'navbar-sticky': navbarSticky,
         }">
             <div class="container header">
-                <NuxtLink to="/" class="navbar-brand site-title">Vincent</NuxtLink>
+                <NuxtLink to="/" class="navbar-brand site-title">
+                    <img src="/favicon.ico" alt="Vincent" width="32" height="32" />
+                </NuxtLink>
 
                 <div class="ms-auto ms-md-0"></div>
 
