@@ -39,7 +39,7 @@ const siteUrl = config.public.siteUrl
 
 const title = 'Vincent Capek — Full-Stack Developer (Laravel & Vue)'
 const description =
-  'Full-stack developer specializing in Laravel, Vue/Nuxt and TypeScript. I build fast, maintainable web apps and dashboards end-to-end, fully remote.'
+  'Full-stack developer based in Manosque, specializing in Laravel, Vue/Nuxt and TypeScript. I build fast, maintainable web apps and dashboards end-to-end, fully remote.'
 
 useSeoMeta({
   title,
