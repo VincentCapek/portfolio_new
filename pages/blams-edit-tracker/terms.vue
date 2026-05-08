@@ -1,12 +1,20 @@
 <template>
-	<div class="legal-page container py-5">
-		<div class="row justify-content-center">
-			<div class="col-12 col-md-8 col-lg-7">
-				<h1 class="legal-title mb-2">Terms of Service</h1>
-				<p class="legal-app mb-4">Blams Edit Tracker</p>
-				<p class="legal-date mb-5">Last updated: May 2026</p>
+	<section class="tl-single-portfolio">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<ul class="tl-widget post-info list-unstyled layout-inline flex-row has-separator">
+						<li>Legal</li>
+						<li>Blams Edit Tracker</li>
+						<li>May 2026</li>
+					</ul>
 
-				<section class="legal-section">
+					<h2 class="post-title">Terms of Service</h2>
+				</div>
+			</div>
+
+			<div class="row mt-4 mt-md-5">
+				<div class="col-12 col-lg-7">
 					<p>
 						Blams Edit Tracker is a personal analytics dashboard used to track and analyze
 						short-form video statistics from TikTok and YouTube Shorts.
@@ -34,14 +42,18 @@
 						For questions, contact:
 						<a href="mailto:contact@vincent.capek.fr">contact@vincent.capek.fr</a>
 					</p>
-				</section>
+				</div>
+			</div>
 
-				<div class="legal-back mt-5">
-					<NuxtLink to="/">← Back to portfolio</NuxtLink>
+			<div class="row mt-4">
+				<div class="col-12">
+					<NuxtLink to="/" class="tl-widget button swap-icon">
+						← Back to portfolio
+					</NuxtLink>
 				</div>
 			</div>
 		</div>
-	</div>
+	</section>
 </template>
 
 <script setup lang="ts">
@@ -52,49 +64,3 @@ useSeoMeta({
 	ogDescription: 'Terms of Service for Blams Edit Tracker, a personal analytics dashboard for TikTok and YouTube Shorts statistics.',
 })
 </script>
-
-<style scoped lang="scss">
-.legal-page {
-	min-height: 80vh;
-}
-
-.legal-title {
-	font-size: 2rem;
-	font-weight: 700;
-	color: var(--bs-body-color, #1a1a2e);
-}
-
-.legal-app {
-	font-size: 1.1rem;
-	font-weight: 500;
-	color: var(--bs-primary, #6366f1);
-	letter-spacing: 0.02em;
-}
-
-.legal-date {
-	font-size: 0.875rem;
-	color: var(--bs-secondary-color, #6c757d);
-}
-
-.legal-section p {
-	line-height: 1.75;
-	margin-bottom: 1.25rem;
-	color: var(--bs-body-color, #374151);
-}
-
-.legal-section a {
-	color: var(--bs-primary, #6366f1);
-	text-decoration: underline;
-	text-underline-offset: 3px;
-}
-
-.legal-back a {
-	font-size: 0.9rem;
-	color: var(--bs-secondary-color, #6c757d);
-	text-decoration: none;
-
-	&:hover {
-		color: var(--bs-primary, #6366f1);
-	}
-}
-</style>
