@@ -63,4 +63,8 @@ useSeoMeta({
 	ogTitle: 'Terms of Service — Blams Edit Tracker',
 	ogDescription: 'Terms of Service for Blams Edit Tracker, a personal analytics dashboard for TikTok and YouTube Shorts statistics.',
 })
+
+useHead({
+	meta: [{ name: 'tiktok-developers-site-verification', content: 'MpG7bMcnsv3gZhDP6bl3eMgA1Oj3jm3C' }],
+})
 </script>

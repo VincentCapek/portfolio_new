@@ -69,4 +69,8 @@ useSeoMeta({
 	ogTitle: 'Privacy Policy — Blams Edit Tracker',
 	ogDescription: 'Privacy Policy for Blams Edit Tracker, a personal analytics dashboard for TikTok and YouTube Shorts statistics.',
 })
+
+useHead({
+	meta: [{ name: 'tiktok-developers-site-verification', content: 'SVL2PsORF7pKQeFIQz4Sz0w9PRMMeTrk' }],
+})
 </script>
