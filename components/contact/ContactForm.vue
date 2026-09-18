@@ -28,94 +28,42 @@
         </p>
       </div>
 
-      <div class="form-group mb-3">
-        <p>
-          <label class="form-label">I'm interested in:</label>
-          <br />
-          <span class="form-control-wrap">
-            <span class="wpcf7-form-control wpcf7-radio">
-              <span class="wpcf7-list-item first">
-                <label>
-                  <input v-model="form.interest" type="radio" name="interest" value="Website / Landing page" />
-                  <span class="wpcf7-list-item-label">Website / Landing page</span>
-                </label>
-              </span>
-
-              <span class="wpcf7-list-item">
-                <label>
-                  <input v-model="form.interest" type="radio" name="interest" value="Web app / SaaS" />
-                  <span class="wpcf7-list-item-label">Web app / SaaS</span>
-                </label>
-              </span>
-
-              <span class="wpcf7-list-item">
-                <label>
-                  <input v-model="form.interest" type="radio" name="interest" value="API / Backend" />
-                  <span class="wpcf7-list-item-label">API / Backend</span>
-                </label>
-              </span>
-
-              <span class="wpcf7-list-item last">
-                <label>
-                  <input v-model="form.interest" type="radio" name="interest" value="Maintenance / Improvements" />
-                  <span class="wpcf7-list-item-label">Maintenance / Improvements</span>
-                </label>
-              </span>
-            </span>
-          </span>
-        </p>
-      </div>
-
-      <div class="form-group mb-3">
-        <p>
-          <label class="form-label">My budget is:</label>
-          <br />
-          <span class="form-control-wrap" data-name="budget">
-            <span class="wpcf7-form-control wpcf7-radio">
-              <span class="wpcf7-list-item first">
-                <label>
-                  <input v-model="form.budget" type="radio" name="budget" value="< 2k" />
-                  <span class="wpcf7-list-item-label">&lt; 2k</span>
-                </label>
-              </span>
-
-              <span class="wpcf7-list-item">
-                <label>
-                  <input v-model="form.budget" type="radio" name="budget" value="2-5k" />
-                  <span class="wpcf7-list-item-label">2-5k</span>
-                </label>
-              </span>
-
-              <span class="wpcf7-list-item">
-                <label>
-                  <input v-model="form.budget" type="radio" name="budget" value="5-10k" />
-                  <span class="wpcf7-list-item-label">5-10k</span>
-                </label>
-              </span>
-
-              <span class="wpcf7-list-item">
-                <label>
-                  <input v-model="form.budget" type="radio" name="budget" value="10-15k" />
-                  <span class="wpcf7-list-item-label">10-15k</span>
-                </label>
-              </span>
-
-              <span class="wpcf7-list-item last">
-                <label>
-                  <input v-model="form.budget" type="radio" name="budget" value="> 20k" />
-                  <span class="wpcf7-list-item-label">&gt; 20k</span>
-                </label>
-              </span>
-            </span>
-          </span>
-        </p>
-      </div>
-
       <div class="form-floating mb-3">
         <p>
           <span class="form-control-wrap">
-            <input v-model.trim="form.timeline" class="form-control" aria-invalid="false"
-              placeholder="What is your timeline?" type="text" name="timeline" autocomplete="off" />
+            <input v-model.trim="form.company" class="form-control" aria-invalid="false"
+              placeholder="Company / Organization (optional)" type="text" name="company" autocomplete="organization" />
+          </span>
+        </p>
+      </div>
+
+      <div class="form-group mb-3">
+        <p>
+          <label class="form-label">This is about:</label>
+          <br />
+          <span class="form-control-wrap">
+            <span class="wpcf7-form-control wpcf7-radio">
+              <span class="wpcf7-list-item first">
+                <label>
+                  <input v-model="form.reason" type="radio" name="reason" value="Job opportunity" />
+                  <span class="wpcf7-list-item-label">Job opportunity</span>
+                </label>
+              </span>
+
+              <span class="wpcf7-list-item">
+                <label>
+                  <input v-model="form.reason" type="radio" name="reason" value="Freelance / Contract mission" />
+                  <span class="wpcf7-list-item-label">Freelance / Contract mission</span>
+                </label>
+              </span>
+
+              <span class="wpcf7-list-item last">
+                <label>
+                  <input v-model="form.reason" type="radio" name="reason" value="Other" />
+                  <span class="wpcf7-list-item-label">Other</span>
+                </label>
+              </span>
+            </span>
           </span>
         </p>
       </div>
@@ -149,9 +97,8 @@ const form = reactive({
   name: '',
   email: '',
   phone: '',
-  interest: '',
-  budget: '',
-  timeline: '',
+  company: '',
+  reason: '',
   message: '',
 })
 
@@ -163,9 +110,8 @@ function resetForm() {
   form.name = ''
   form.email = ''
   form.phone = ''
-  form.interest = ''
-  form.budget = ''
-  form.timeline = ''
+  form.company = ''
+  form.reason = ''
   form.message = ''
 }
 

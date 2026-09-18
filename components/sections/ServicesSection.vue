@@ -10,7 +10,7 @@ type ServiceItem = {
 const services: ServiceItem[] = [
     {
         title: 'Mockup Integration',
-        description: 'I can integrate your Figma (or any design) into a responsive, pixel-clean website with reusable components and clean HTML/CSS.',
+        description: 'Turning a Figma (or any design) into a responsive, pixel-clean website with reusable components and clean HTML/CSS.',
         iconSrc: '/assets/images/content/icon-1.webp',
         iconAlt: 'UX & UI',
         href: '#',
@@ -24,7 +24,7 @@ const services: ServiceItem[] = [
     },
     {
         title: 'Design & Creative',
-        description: 'Creating strong visuals, layouts, and motion that elevate your product and brand.',
+        description: 'Applying strong visual and UX judgment to layouts and motion that elevate a product.',
         iconSrc: '/assets/images/content/icon-3.webp',
         iconAlt: 'Design & Creative',
         href: '#',
@@ -45,8 +45,8 @@ const services: ServiceItem[] = [
             <div class="row justify-content-center align-items-center intro text-center">
                 <div class="col-12 col-md-7">
                     <div class="tl-widget heading">
-                        <span class="title-before">Colleborate with brand and agencies to create</span>
-                        impactful results
+                        <span class="title-before">Bringing structure and reliability to a team's</span>
+                        real-world projects
                     </div>
                 </div>
             </div>

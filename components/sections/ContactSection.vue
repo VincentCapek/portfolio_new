@@ -1,6 +1,9 @@
 <script setup>
 import ContactForm from '@components/contact/ContactForm.vue';
 import ContactSocialIcons from '@components/contact/ContactSocialIcons.vue';
+
+const cvFilename = 'CV-Vincent-Capek-Developpeur-Full-Stack.pdf'
+const cvPath = `/documents/${cvFilename}`
 </script>
 
 <template>
@@ -12,10 +15,14 @@ import ContactSocialIcons from '@components/contact/ContactSocialIcons.vue';
                         <!-- Intro -->
                         <div class="tl-widget heading">
                             <h3 class="title m-0">
-                                <span class="title-before">Schedule a call with me to see if</span>
-                                I can help
+                                <span class="title-before">Are you hiring a</span>
+                                developer?
                             </h3>
-                            <p>Reach out to me today and let’s discuss how I can help you achieve your goals.</p>
+                            <p>
+                                I'm currently open to new opportunities in web development, mainly around
+                                Laravel/PHP and full-stack environments. Feel free to reach out about a role,
+                                a team, or a project I could contribute to.
+                            </p>
                         </div>
                         <!-- Icon List -->
                         <ul class="contact-icon-list list-unstyled my-4">

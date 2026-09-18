@@ -6,9 +6,8 @@ const ContactSchema = z.object({
     name: z.string().min(3).max(255),
     email: z.string().email().min(5).max(255),
     phone: z.string().optional().or(z.literal('')),
-    interest: z.string().optional().or(z.literal('')),
-    budget: z.string().optional().or(z.literal('')),
-    timeline: z.string().optional().or(z.literal('')),
+    company: z.string().optional().or(z.literal('')),
+    reason: z.string().optional().or(z.literal('')),
     message: z.string().min(10).max(10_000),
 })
 
@@ -35,9 +34,8 @@ export default defineEventHandler(async (event) => {
         `Name: ${body.name}`,
         `Email: ${body.email}`,
         body.phone ? `Phone: ${body.phone}` : null,
-        body.interest ? `Interest: ${body.interest}` : null,
-        body.budget ? `Budget: ${body.budget}` : null,
-        body.timeline ? `Timeline: ${body.timeline}` : null,
+        body.company ? `Company: ${body.company}` : null,
+        body.reason ? `Reason: ${body.reason}` : null,
         '',
         body.message,
     ]

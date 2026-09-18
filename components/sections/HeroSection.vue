@@ -1,10 +1,13 @@
 <script setup lang="ts">
 /**
- * Hero copy aligned with Vincent's profile:
- * - Freelance full-stack developer (PHP/Laravel + Vue)
- * - Product mindset, performance, maintainable code
- * - Clear CTA to portfolio section
+ * Hero copy aligned with Vincent's current profile:
+ * - Full-stack developer, primarily Laravel/PHP, also Vue 3 / TypeScript
+ * - Actively looking for a new job opportunity (not freelance missions)
+ * - Clear CTAs toward the CV and contact
  */
+
+const cvFilename = 'CV-Vincent-Capek-Developpeur-Full-Stack.pdf'
+const cvPath = `/documents/${cvFilename}`
 </script>
 
 <template>
@@ -17,19 +20,21 @@
 
                         <div class="tl-widget heading mt-3">
                             <h2 class="title mb-0">
-                                <span class="title-before">Laravel & Vue developer —</span>
-                                I build fast, reliable web products.
+                                <span class="title-before">Full-Stack Developer —</span>
+                                Laravel / PHP, Vue 3 & TypeScript.
                             </h2>
                         </div>
 
                         <h5 class="bio">
-                            Hi, I’m Vincent. I help teams ship clean full-stack apps (PHP/Laravel + Vue),
-                            with a strong focus on performance and maintainable code.
+                            Hi, I’m Vincent — a full-stack developer with a strong Laravel/PHP backend focus and a
+                            solid range across Vue 3, TypeScript, SQL, Docker and Python. Currently looking for a
+                            new opportunity to join a team and ship real-world web projects.
                         </h5>
 
-                        <div class="hero-button mt-3 mt-md-5">
-                            <a href="#portfolio" class="tl-widget button swap-icon smooth-anchor">
-                                See my work
+                        <div class="hero-button mt-3 mt-md-5 d-flex flex-wrap justify-content-center gap-3">
+                            <a :href="cvPath" target="_blank" rel="noopener noreferrer"
+                                class="tl-widget button swap-icon">
+                                View my CV
                                 <span class="icon">
                                     <svg class="svg-inline--fa fa-arrow-right" aria-hidden="true" focusable="false"
                                         data-prefix="fas" data-icon="arrow-right" role="img"
@@ -39,10 +44,14 @@
                                     </svg>
                                 </span>
                             </a>
+
+                            <a href="#portfolio" class="tl-widget button swap-icon smooth-anchor">
+                                See my projects
+                            </a>
                         </div>
 
                         <p class="mt-3 mb-0" style="opacity: 0.7">
-                            Available for freelance missions — backend, full-stack, or product work.
+                            Open to new opportunities — backend, full-stack, or product-focused roles.
                         </p>
                     </div>
                 </div>

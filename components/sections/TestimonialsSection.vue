@@ -8,7 +8,7 @@
                         <div class="tl-widget heading">
                             <div class="title m-0">
                                 <span class="title-before">Kind words from</span>
-                                satisfied clients
+                                people I've worked with
                             </div>
                         </div>
                     </div>

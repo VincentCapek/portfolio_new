@@ -23,9 +23,9 @@
                                 <span class="title-before">Define</span>
                             </h4>
                             <div class="subtitle">
-                                We clarify the scope and goals: what you want to achieve, who it’s for, constraints, and
-                                priorities.
-                                Then we turn that into a concrete plan (features, pages, data, integrations, and
+                                I start by clarifying the scope and goals: what needs to be achieved, who it’s for,
+                                constraints, and priorities.
+                                That's then turned into a concrete plan (features, pages, data, integrations, and
                                 timeline) so the project
                                 stays predictable.
                             </div>
@@ -43,9 +43,8 @@
                             <div class="subtitle">
                                 I implement the solution with an iterative approach: clean architecture, reusable
                                 components, and
-                                reliable integrations. You get regular updates, visible progress, and code that’s easy
-                                to maintain and
-                                scale.
+                                reliable integrations, with regular progress and code that’s easy to maintain and
+                                scale within a team.
                             </div>
                         </div>
                     </div>
@@ -59,10 +58,9 @@
                                 <span class="title-before">Deliver</span>
                             </h4>
                             <div class="subtitle">
-                                I ship with confidence: testing, QA, and a smooth deployment process. You get a proper
-                                handoff
-                                (documentation + setup notes), and I can stay available for fixes, improvements, or
-                                ongoing maintenance.
+                                I ship with confidence: testing, QA, and a smooth deployment process, backed by clear
+                                documentation
+                                and setup notes that keep the codebase easy to pick up and maintain over time.
                             </div>
                         </div>
                     </div>

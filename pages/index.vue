@@ -20,6 +20,9 @@
   <!-- Sections - Section Approch -->
   <ApproachSection />
 
+  <!-- Sections - Section CV -->
+  <CvSection />
+
   <!-- Sections - Section Contact -->
   <ContactSection />
 </template>
@@ -32,6 +35,7 @@ import ServicesSection from '@components/sections/ServicesSection.vue';
 import PortfolioSection from '@components/sections/PortfolioSection.vue';
 import SkillsSection from '@components/sections/SkillsSection.vue';
 import ApproachSection from '@components/sections/ApproachSection.vue';
+import CvSection from '@components/sections/CvSection.vue';
 import ContactSection from '@components/sections/ContactSection.vue';
 
 const config = useRuntimeConfig()
@@ -39,7 +43,7 @@ const siteUrl = config.public.siteUrl
 
 const title = 'Vincent Capek — Full-Stack Developer (Laravel & Vue)'
 const description =
-  'Full-stack developer based in Manosque, specializing in Laravel, Vue/Nuxt and TypeScript. I build fast, maintainable web apps and dashboards end-to-end, fully remote.'
+  'Portfolio of Vincent Capek, a full-stack developer based in Manosque specializing in Laravel/PHP, Vue 3 and TypeScript, currently looking for a new job opportunity.'
 
 useSeoMeta({
   title,
